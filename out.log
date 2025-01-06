@@ -1,0 +1,12 @@
+201  INFO  c.d.driver.core.GuavaCompatibility: Detected Guava >= 19 in the classpath, using modern compatibility layer
+316  INFO  com.datastax.driver.core.Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+316  INFO  c.datastax.driver.core.ClockFactory: Using java.lang.System clock to generate timestamps.
+386  WARN  com.datastax.driver.core.NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+682  INFO  c.d.d.c.p.DCAwareRoundRobinPolicy: Using data-center name 'datacenter1' for DCAwareRoundRobinPolicy (if this is incorrect, please provide the correct datacenter name with DCAwareRoundRobinPolicy constructor)
+683  INFO  com.datastax.driver.core.Cluster: New Cassandra host /127.0.0.1:9042 added
+726  INFO  cassdemo.backend.BackendSession: Statements prepared
+734  INFO  cassdemo.backend.BackendSession: User Adam upserted
+736  INFO  cassdemo.backend.BackendSession: User Ola upserted
+739  INFO  cassdemo.backend.BackendSession: User Ewa upserted
+742  INFO  cassdemo.backend.BackendSession: User Kasia upserted
+862  INFO  cassdemo.backend.BackendSession: All users deleted
