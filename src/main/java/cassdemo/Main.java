@@ -30,7 +30,7 @@ public class Main {
 		session.upsertUser("PP", "Ola", 509, null);
 		session.upsertUser("UAM", "Ewa", 720, "B St");
 		session.upsertUser("PP", "Kasia", 713, "C St");
-
+		//mateusz test commit
 		String output = session.selectAll();
 		System.out.println("Users: \n" + output);
 
