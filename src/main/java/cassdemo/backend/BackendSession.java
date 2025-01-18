@@ -4,6 +4,8 @@ import java.util.*;
 import java.time.Instant;
 import java.util.stream.Collectors;
 import cassdemo.tables.*;
+import com.datastax.driver.mapping.Mapper;
+import com.datastax.driver.mapping.MappingManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.datastax.driver.core.BoundStatement;
@@ -27,18 +29,21 @@ import com.datastax.driver.core.Session;
 public class BackendSession {
 
 	private static final Logger logger = LoggerFactory.getLogger(BackendSession.class);
-
+	public static MappingManager manager = null;
 	private Session session;
 
 	public BackendSession(String contactPoint, String keyspace) throws BackendException {
 
+		logger.debug("Backend starting");
 		Cluster cluster = Cluster.builder().addContactPoint(contactPoint).build();
 		try {
 			session = cluster.connect(keyspace);
+			manager = new MappingManager(session);
 		} catch (Exception e) {
 			throw new BackendException("Could not connect to the cluster. " + e.getMessage() + ".", e);
 		}
 		prepareStatements();
+		logger.debug("Backend successfully started");
 	}
 
 	/* Retrieve all records from each table */
@@ -87,7 +92,7 @@ public class BackendSession {
 			INSERT_INTO_LOCKERS = session.prepare(
 					"INSERT INTO lockers (locker_id, locker_name, locker_boxes) VALUES (?, ?, ?);");
 			INSERT_INTO_SHIPMENTS = session.prepare(
-					"INSERT INTO shipments (shipment_id, shipment_name) VALUES (?, ?);");
+					"INSERT INTO shipments (shipment_id, shipment_name,box_size) VALUES (?, ?,?);");
 			INSERT_SHIPMENT_INTO_LOCKER = session.prepare(
 					"BEGIN BATCH " +
 							"INSERT INTO locker_shipments (locker_id, shipment_id, locker_box_index, addedAt, status) VALUES (?, ?, ?, ?, ?);" +
@@ -134,7 +139,22 @@ public class BackendSession {
 		return mapper.map(rs).all();
 	}
 
-	public LockerShipment selectAllShipmentsFromLockerById(UUID lockerId) throws BackendException {
+	public List<Shipment> selectAllShipments() throws BackendException {
+		BoundStatement bs = new BoundStatement(SELECT_ALL_FROM_SHIPMENTS);
+		Mapper<Shipment> mapper = manager.mapper(Shipment.class);
+
+		ResultSet rs = null;
+
+		try {
+			rs = session.execute(bs);
+		} catch(Exception e) {
+			throw new BackendException("Could not execute statement. " + e.getMessage() + ".", e);
+		}
+
+		return mapper.map(rs).all();
+	}
+
+	public List<LockerShipment> selectAllShipmentsFromLockerById(UUID lockerId) throws BackendException {
 		BoundStatement bs = new BoundStatement(SELECT_ALL_SHIPMENTS_FROM_LOCKER_BY_ID);
 		bs.bind(lockerId);
 		Mapper<LockerShipment> mapper = manager.mapper(LockerShipment.class);
@@ -200,11 +220,11 @@ public class BackendSession {
 
 	/* insert */
 
-	public void insertLocker(String lockerName, String... boxSizes) throws BackendException {
+	public void insertLocker(String lockerName, Byte... locker_boxes) throws BackendException {
 		UUID newUUID = UUID.randomUUID();
 
 		BoundStatement bs = new BoundStatement(INSERT_INTO_LOCKERS);
-		bs.bind(newUUID, lockerName, Arrays.asList(boxSizes));
+		bs.bind(newUUID, lockerName, Arrays.asList(locker_boxes));
 
 		try {
 			session.execute(bs);
@@ -215,11 +235,11 @@ public class BackendSession {
 		logger.info("Locker " + lockerName + " inserted with id: " + newUUID);
 	}
 
-	public void insertShipment(String shipmentName) throws BackendException {
+	public void insertShipment(String shipmentName, Byte boxSize) throws BackendException {
 		UUID newUUID = UUID.randomUUID();
 
 		BoundStatement bs = new BoundStatement(INSERT_INTO_SHIPMENTS);
-		bs.bind(newUUID, shipmentName);
+		bs.bind(newUUID, shipmentName,boxSize);
 
 		try {
 			session.execute(bs);
@@ -227,7 +247,25 @@ public class BackendSession {
 			throw new BackendException("Could not perform an insert. " + e.getMessage() + ".", e);
 		}
 
-		logger.info("Shipment " + shipmentName + " inserted with id: " + newUUID);
+		logger.info("Shipment " + shipmentName + " inserted with id: " + newUUID+"size: "+boxSize);
+	}
+
+	public void deleteAll() throws BackendException {
+		BoundStatement bs = new BoundStatement(DELETE_ALL_FROM_LOCKERS);
+		BoundStatement bs1 = new BoundStatement(DELETE_ALL_FROM_SHIPMENTS);
+		BoundStatement bs2 = new BoundStatement(DELETE_ALL_FROM_LOCKER_SHIPMENTS);
+		BoundStatement bs3 = new BoundStatement(DELETE_ALL_FROM_SHIPMENT_LOCKERS);
+
+		try {
+			session.execute(bs);
+			session.execute(bs1);
+			session.execute(bs2);
+			session.execute(bs3);
+		} catch (Exception e) {
+			throw new BackendException("Could not perform a delete operation. " + e.getMessage() + ".", e);
+		}
+
+		logger.info("All data deleted");
 	}
 
 	protected void finalize() {

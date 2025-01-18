@@ -8,7 +8,7 @@ import java.util.List;
 public class Locker {
     private UUID locker_id;
     private String locker_name;
-    private List<Integer> locker_boxes;
+    private List<Byte> locker_boxes;
 
     public UUID getLocker_id() {
         return locker_id;
@@ -26,11 +26,11 @@ public class Locker {
         this.locker_name = locker_name;
     }
 
-    public List<Integer> getLocker_boxes() {
+    public List<Byte> getLocker_boxes() {
         return locker_boxes;
     }
 
-    public void setLocker_boxes(List<Integer> locker_boxes) {
+    public void setLocker_boxes(List<Byte> locker_boxes) {
         this.locker_boxes = locker_boxes;
     }
 

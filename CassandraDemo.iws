@@ -5,29 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14676c8e-1068-401d-8fc2-e40422d33ab4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/Locker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/LockerShipment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/Shipment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/ShipmentLocker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repo.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repo.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CassandraDemo.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CassandraDemo.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/CassandraDemo.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CassandraDemo.iws" beforeDir="false" afterPath="$PROJECT_DIR$/CassandraDemo.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out.log" beforeDir="false" afterPath="$PROJECT_DIR$/out.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/create_schema.cql" beforeDir="false" afterPath="$PROJECT_DIR$/schema/create_schema.cql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/load_data.cql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/backend/BackendSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/backend/BackendSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/tables/Locker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/Locker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/tables/Shipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/Shipment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
     <option name="REVERSE_PATCH" value="false" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any converted="true">
@@ -65,6 +65,23 @@
     <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -75,9 +92,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -100,7 +123,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Artur/Studies/CassRaidSignup",
@@ -153,6 +179,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="repo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="repo" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -197,6 +236,7 @@
       <updated>1736164165344</updated>
       <workItem from="1736164166199" duration="3946000" />
       <workItem from="1737194901634" duration="14536000" />
+      <workItem from="1737235576359" duration="5707000" />
     </task>
     <servers />
   </component>

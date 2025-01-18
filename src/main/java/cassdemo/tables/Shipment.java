@@ -8,7 +8,7 @@ import java.util.List;
 public class Shipment {
     private UUID shipment_id;
     private String shipment_name;
-    private Integer box_size;
+    private Byte box_size;
 
     public UUID getShipment_id() {
         return shipment_id;
@@ -26,11 +26,11 @@ public class Shipment {
         this.shipment_name = shipment_name;
     }
 
-    public Integer getBox_size() {
+    public Byte getBox_size() {
         return box_size;
     }
 
-    public void setBox_size(Integer box_size) {
+    public void setBox_size(Byte box_size) {
         this.box_size = box_size;
     }
 
