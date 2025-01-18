@@ -1,8 +1,11 @@
 package cassdemo.backend;
 
+import java.util.*;
+import java.time.Instant;
+import java.util.stream.Collectors;
+import cassdemo.tables.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.datastax.driver.core.BoundStatement;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.PreparedStatement;
@@ -38,74 +41,193 @@ public class BackendSession {
 		prepareStatements();
 	}
 
-	private static PreparedStatement SELECT_ALL_FROM_USERS;
-	private static PreparedStatement INSERT_INTO_USERS;
-	private static PreparedStatement DELETE_ALL_FROM_USERS;
+	/* Retrieve all records from each table */
+	private static PreparedStatement SELECT_ALL_FROM_LOCKERS;
+	private static PreparedStatement SELECT_ALL_FROM_SHIPMENTS;
+	private static PreparedStatement SELECT_ALL_FROM_LOCKER_SHIPMENTS;
+	private static PreparedStatement SELECT_ALL_FROM_SHIPMENT_LOCKERS;
 
-	private static final String USER_FORMAT = "- %-10s  %-16s %-10s %-10s\n";
-	// private static final SimpleDateFormat df = new
-	// SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	/* Retrieve all shipments stored in a specific locker or all lockers containing a specific shipment */
+	private static PreparedStatement SELECT_ALL_SHIPMENTS_FROM_LOCKER_BY_ID;
+	private static PreparedStatement SELECT_ALL_LOCKERS_FROM_SHIPMENT_BY_ID;
+
+	private static PreparedStatement SELECT_ONE_FROM_LOCKERS;
+	private static PreparedStatement SELECT_ONE_FROM_SHIPMENTS;
+	private static PreparedStatement SELECT_ONE_FROM_LOCKER_SHIPMENTS;
+	private static PreparedStatement SELECT_ONE_FROM_SHIPMENT_LOCKERS;
+
+	private static PreparedStatement INSERT_INTO_LOCKERS;
+	private static PreparedStatement INSERT_INTO_SHIPMENTS;
+	private static PreparedStatement INSERT_SHIPMENT_INTO_LOCKER;
+
+	private static PreparedStatement DELETE_ALL_FROM_LOCKERS;
+	private static PreparedStatement DELETE_ALL_FROM_SHIPMENTS;
+	private static PreparedStatement DELETE_ALL_FROM_LOCKER_SHIPMENTS;
+	private static PreparedStatement DELETE_ALL_FROM_SHIPMENT_LOCKERS;
+
+	/* Remove relationship between locker and shipment */
+	private static PreparedStatement DELETE_SHIPMENT_FROM_LOCKER_BY_ID;
 
 	private void prepareStatements() throws BackendException {
+		logger.debug("Preparing statements / queries");
 		try {
-			SELECT_ALL_FROM_USERS = session.prepare("SELECT * FROM users;");
-			INSERT_INTO_USERS = session
-					.prepare("INSERT INTO users (companyName, name, phone, street) VALUES (?, ?, ?, ?);");
-			DELETE_ALL_FROM_USERS = session.prepare("TRUNCATE users;");
+			SELECT_ALL_FROM_LOCKERS = session.prepare("SELECT * FROM lockers;");
+			SELECT_ALL_FROM_SHIPMENTS = session.prepare("SELECT * FROM shipments;");
+			SELECT_ALL_FROM_LOCKER_SHIPMENTS = session.prepare("SELECT * FROM locker_shipments;");
+			SELECT_ALL_FROM_SHIPMENT_LOCKERS = session.prepare("SELECT * FROM shipment_lockers;");
+
+			SELECT_ALL_SHIPMENTS_FROM_LOCKER_BY_ID = session.prepare("SELECT * FROM locker_shipments WHERE locker_id=?;");
+			SELECT_ALL_LOCKERS_FROM_SHIPMENT_BY_ID = session.prepare("SELECT * FROM shipment_lockers WHERE shipment_id=?;");
+
+			SELECT_ONE_FROM_LOCKERS = session.prepare("SELECT * FROM lockers WHERE locker_id=?;");
+			SELECT_ONE_FROM_SHIPMENTS = session.prepare("SELECT * FROM shipments WHERE shipment_id=?;");
+			SELECT_ONE_FROM_LOCKER_SHIPMENTS = session.prepare("SELECT * FROM locker_shipments WHERE locker_id=? AND shipment_id=?;");
+			SELECT_ONE_FROM_SHIPMENT_LOCKERS = session.prepare("SELECT * FROM shipment_lockers WHERE shipment_id=? AND locker_id=?;");
+
+			INSERT_INTO_LOCKERS = session.prepare(
+					"INSERT INTO lockers (locker_id, locker_name, locker_boxes) VALUES (?, ?, ?);");
+			INSERT_INTO_SHIPMENTS = session.prepare(
+					"INSERT INTO shipments (shipment_id, shipment_name) VALUES (?, ?);");
+			INSERT_SHIPMENT_INTO_LOCKER = session.prepare(
+					"BEGIN BATCH " +
+							"INSERT INTO locker_shipments (locker_id, shipment_id, locker_box_index, addedAt, status) VALUES (?, ?, ?, ?, ?);" +
+							"INSERT INTO shipment_lockers (shipment_id, locker_id, locker_box_index, addedAt, status) VALUES (?, ?, ?, ?, ?);" +
+							"APPLY BATCH;"
+			);
+
+			DELETE_ALL_FROM_LOCKERS = session.prepare("TRUNCATE lockers;");
+			DELETE_ALL_FROM_SHIPMENTS = session.prepare("TRUNCATE shipments;");
+			DELETE_ALL_FROM_LOCKER_SHIPMENTS = session.prepare("TRUNCATE locker_shipments;");
+			DELETE_ALL_FROM_SHIPMENT_LOCKERS = session.prepare("TRUNCATE shipment_lockers;");
+
+			/* Initialize query for removing shipment-locker relationship atomically */
+			DELETE_SHIPMENT_FROM_LOCKER_BY_ID = session.prepare(
+					"BEGIN BATCH " +
+							"DELETE FROM locker_shipments WHERE locker_id=? AND shipment_id=?; " +
+							"DELETE FROM shipment_lockers WHERE shipment_id=? AND locker_id=?; " +
+							"APPLY BATCH;"
+			);
+
 		} catch (Exception e) {
 			throw new BackendException("Could not prepare statements. " + e.getMessage() + ".", e);
 		}
 
-		logger.info("Statements prepared");
+		logger.debug("Statements and queries prepared");
 	}
 
-	public String selectAll() throws BackendException {
-		StringBuilder builder = new StringBuilder();
-		BoundStatement bs = new BoundStatement(SELECT_ALL_FROM_USERS);
+	/* CRUD operations */
+
+	/* select */
+
+	public List<Locker> selectAllLockers() throws BackendException {
+		BoundStatement bs = new BoundStatement(SELECT_ALL_FROM_LOCKERS);
+		Mapper<Locker> mapper = manager.mapper(Locker.class);
 
 		ResultSet rs = null;
 
 		try {
 			rs = session.execute(bs);
-		} catch (Exception e) {
-			throw new BackendException("Could not perform a query. " + e.getMessage() + ".", e);
+		} catch(Exception e) {
+			throw new BackendException("Could not execute statement. " + e.getMessage() + ".", e);
 		}
 
-		for (Row row : rs) {
-			String rcompanyName = row.getString("companyName");
-			String rname = row.getString("name");
-			int rphone = row.getInt("phone");
-			String rstreet = row.getString("street");
-
-			builder.append(String.format(USER_FORMAT, rcompanyName, rname, rphone, rstreet));
-		}
-
-		return builder.toString();
+		return mapper.map(rs).all();
 	}
 
-	public void upsertUser(String companyName, String name, int phone, String street) throws BackendException {
-		BoundStatement bs = new BoundStatement(INSERT_INTO_USERS);
-		bs.bind(companyName, name, phone, street);
+	public LockerShipment selectAllShipmentsFromLockerById(UUID lockerId) throws BackendException {
+		BoundStatement bs = new BoundStatement(SELECT_ALL_SHIPMENTS_FROM_LOCKER_BY_ID);
+		bs.bind(lockerId);
+		Mapper<LockerShipment> mapper = manager.mapper(LockerShipment.class);
+
+		ResultSet rs = null;
+
+		try {
+			rs = session.execute(bs);
+		} catch(Exception e) {
+			throw new BackendException("Could not execute statement. " + e.getMessage() + ".", e);
+		}
+
+		return mapper.map(rs).all();
+	}
+
+	public Locker selectLocker(UUID lockerId) throws BackendException {
+		BoundStatement bs = new BoundStatement(SELECT_ONE_FROM_LOCKERS);
+		bs.bind(lockerId);
+		Mapper<Locker> mapper = manager.mapper(Locker.class);
+
+		ResultSet rs = null;
+
+		try {
+			rs = session.execute(bs);
+		} catch(Exception e) {
+			throw new BackendException("Could not execute statement. " + e.getMessage() + ".", e);
+		}
+
+		return mapper.map(rs).one();
+	}
+
+	public Shipment selectShipment(UUID shipmentId) throws BackendException {
+		BoundStatement bs = new BoundStatement(SELECT_ONE_FROM_SHIPMENTS);
+		bs.bind(shipmentId);
+		Mapper<Shipment> mapper = manager.mapper(Shipment.class);
+
+		ResultSet rs = null;
+
+		try {
+			rs = session.execute(bs);
+		} catch(Exception e) {
+			throw new BackendException("Could not execute statement. " + e.getMessage() + ".", e);
+		}
+
+		return mapper.map(rs).one();
+	}
+
+	public ShipmentLocker selectShipmentLocker(UUID shipmentId, UUID lockerId) throws BackendException {
+		BoundStatement bs = new BoundStatement(SELECT_ONE_FROM_SHIPMENT_LOCKERS);
+		bs.bind(shipmentId, lockerId);
+		Mapper<ShipmentLocker> mapper = manager.mapper(ShipmentLocker.class);
+
+		ResultSet rs = null;
+
+		try {
+			rs = session.execute(bs);
+		} catch(Exception e) {
+			throw new BackendException("Could not execute statement. " + e.getMessage() + ".", e);
+		}
+
+		return mapper.map(rs).one();
+	}
+
+	/* insert */
+
+	public void insertLocker(String lockerName, String... boxSizes) throws BackendException {
+		UUID newUUID = UUID.randomUUID();
+
+		BoundStatement bs = new BoundStatement(INSERT_INTO_LOCKERS);
+		bs.bind(newUUID, lockerName, Arrays.asList(boxSizes));
 
 		try {
 			session.execute(bs);
 		} catch (Exception e) {
-			throw new BackendException("Could not perform an upsert. " + e.getMessage() + ".", e);
+			throw new BackendException("Could not perform an insert. " + e.getMessage() + ".", e);
 		}
 
-		logger.info("User " + name + " upserted");
+		logger.info("Locker " + lockerName + " inserted with id: " + newUUID);
 	}
 
-	public void deleteAll() throws BackendException {
-		BoundStatement bs = new BoundStatement(DELETE_ALL_FROM_USERS);
+	public void insertShipment(String shipmentName) throws BackendException {
+		UUID newUUID = UUID.randomUUID();
+
+		BoundStatement bs = new BoundStatement(INSERT_INTO_SHIPMENTS);
+		bs.bind(newUUID, shipmentName);
 
 		try {
 			session.execute(bs);
 		} catch (Exception e) {
-			throw new BackendException("Could not perform a delete operation. " + e.getMessage() + ".", e);
+			throw new BackendException("Could not perform an insert. " + e.getMessage() + ".", e);
 		}
 
-		logger.info("All users deleted");
+		logger.info("Shipment " + shipmentName + " inserted with id: " + newUUID);
 	}
 
 	protected void finalize() {
