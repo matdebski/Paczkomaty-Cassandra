@@ -7,6 +7,7 @@ import cassdemo.backend.BackendException;
 import cassdemo.backend.BackendSession;
 import cassdemo.tables.Locker;
 import cassdemo.tables.Shipment;
+import cassdemo.testing.Testing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,11 +31,12 @@ public class Main {
 		}
 			
 		BackendSession session = new BackendSession(contactPoint, keyspace);
+		Testing testing = new Testing(session);
 
 		Scanner in = new Scanner(System.in);
 		do {
 			System.out.println(
-					"Menu\nx - EXIT\ns - Add shipment\nl - Add locker\nss - Show shipments\nsl - Show lockers\nisl- Insert shipment into locker");
+					"Menu\nx - EXIT\ns - Add shipment\nl - Add locker\nss - Show shipments\nsl - Show lockers\nisl- Insert shipment into locker\nseed - Run seeds\nstress - Run stress test");
 			String input = in.nextLine();
 			switch (input) {
 				case "x" -> {
@@ -109,6 +111,12 @@ public class Main {
 						break;
 					}
 					session.insertShipmentIntoLocker(lockerID,shipmentID);
+				}
+				case "seed" -> {
+					testing.seed();
+				}
+				case "stress" -> {
+					testing.stressTest();
 				}
 				default -> System.out.println("Invalid option. Please try again.");
 			}

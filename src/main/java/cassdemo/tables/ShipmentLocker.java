@@ -8,7 +8,7 @@ import java.time.Instant;
 public class ShipmentLocker {
     private UUID shipment_id;
     private UUID locker_id;
-    private int locker_box_index;
+    private Integer locker_box_index;
     private Instant addedAt;
     private String status;
 
@@ -28,11 +28,11 @@ public class ShipmentLocker {
         this.locker_id = locker_id;
     }
 
-    public int getLocker_box_index() {
+    public Integer getLocker_box_index() {
         return locker_box_index;
     }
 
-    public void setLocker_box_index(int locker_box_index) {
+    public void setLocker_box_index(Integer locker_box_index) {
         this.locker_box_index = locker_box_index;
     }
 
