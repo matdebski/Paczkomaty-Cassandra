@@ -252,7 +252,6 @@ public class BackendSession {
 		logger.info("Shipment " + shipmentName + " inserted with id: " + newUUID+"size: "+boxSize);
 	}
 
-
 	public void insertShipmentIntoLocker(UUID locker_id, UUID  shipment_id, Instant timestamp) throws BackendException {
 		//locker_id, shipment_id, locker_box_index, addedAt, status
 
@@ -356,12 +355,10 @@ public class BackendSession {
 		return true;
 	}
 
-
-
 	public void insertShipmentIntoLocker(UUID locker_id, UUID  shipment_id) throws BackendException{
-
 		insertShipmentIntoLocker(locker_id,shipment_id,Instant.now());
 	}
+
 	public void deleteAll() throws BackendException {
 		BoundStatement bs = new BoundStatement(DELETE_ALL_FROM_LOCKERS);
 		BoundStatement bs1 = new BoundStatement(DELETE_ALL_FROM_SHIPMENTS);
@@ -378,6 +375,25 @@ public class BackendSession {
 		}
 
 		logger.info("All data deleted");
+	}
+
+	public int checkLocker(UUID locker_id) throws BackendException {
+		List<LockerShipment> lockerShipments = selectAllShipmentsFromLockerById(locker_id);
+
+		Map<Integer, Long> indexCounts = lockerShipments.stream()
+				.collect(Collectors.groupingBy(LockerShipment::getLocker_box_index, Collectors.counting()));
+
+		Map<Integer, Long> duplicates = indexCounts.entrySet().stream()
+				.filter(entry -> entry.getValue() > 1)
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+		if (duplicates.isEmpty()) {
+			logger.info("Success: don't found duplicates in locker " + locker_id);
+		} else {
+			logger.info("Failure: found " + duplicates.size() + " duplicates in locker " + locker_id);
+		}
+
+		return duplicates.size();
 	}
 
 	protected void finalize() {
