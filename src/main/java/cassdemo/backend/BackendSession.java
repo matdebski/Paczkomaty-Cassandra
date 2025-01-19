@@ -319,8 +319,6 @@ public class BackendSession {
 				 } catch (Exception e) {
 					 throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
 				 }
-				 break; //add execute
-
 			 }
 		}
 		System.out.println("insertResult: "+confirmed);
