@@ -1,10 +1,7 @@
 package cassdemo;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Properties;
-import java.util.Scanner;
+import java.util.*;
 
 import cassdemo.backend.BackendException;
 import cassdemo.backend.BackendSession;
@@ -37,12 +34,12 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		do {
 			System.out.println(
-					"Menu\nx - EXIT\ns - Add shipment\nl - Add locker\nss - Show shipments\nsl - Show lockers");
+					"Menu\nx - EXIT\ns - Add shipment\nl - Add locker\nss - Show shipments\nsl - Show lockers\nisl- Insert shipment into locker");
 			String input = in.nextLine();
 			switch (input) {
 				case "x" -> {
 					System.out.println("EXITING");
-					session.deleteAll();
+					session.deleteAll();//delete only shipment_locker locker_shipment
 					System.exit(0);
 				}
 				case "s" -> {
@@ -90,6 +87,28 @@ public class Main {
 					} catch (BackendException e) {
 						System.err.println("Error fetching lockers: " + e.getMessage());
 					}
+				}
+				case "isl" -> {
+					System.out.println("Type lockerID: ");
+					String lockerIDInput = in.nextLine();
+					UUID lockerID;
+					try {
+						lockerID = UUID.fromString(lockerIDInput);
+					} catch (IllegalArgumentException e) {
+						System.out.println("Invalid UUID format for lockerID.");
+						break;
+					}
+
+					System.out.println("Type shipmentID: ");
+					String shipmentIDInput = in.nextLine();
+					UUID shipmentID;
+					try {
+						shipmentID = UUID.fromString(shipmentIDInput);
+					} catch (IllegalArgumentException e) {
+						System.out.println("Invalid UUID format for shipmentID.");
+						break;
+					}
+					session.insertShipmentIntoLocker(lockerID,shipmentID);
 				}
 				default -> System.out.println("Invalid option. Please try again.");
 			}

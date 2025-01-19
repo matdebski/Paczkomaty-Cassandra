@@ -1,8 +1,8 @@
-770  INFO  c.d.driver.core.GuavaCompatibility: Detected Guava >= 19 in the classpath, using modern compatibility layer
-1335 INFO  com.datastax.driver.core.Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
-1336 INFO  c.datastax.driver.core.ClockFactory: Using java.lang.System clock to generate timestamps.
-1592 INFO  i.n.util.internal.PlatformDependent: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
-1608 WARN  com.datastax.driver.core.NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
-2731 INFO  c.d.d.c.p.DCAwareRoundRobinPolicy: Using data-center name 'datacenter1' for DCAwareRoundRobinPolicy (if this is incorrect, please provide the correct datacenter name with DCAwareRoundRobinPolicy constructor)
-2737 INFO  com.datastax.driver.core.Cluster: New Cassandra host /127.0.0.1:9042 added
-13339 INFO  cassdemo.backend.BackendSession: All data deleted
+747  INFO  c.d.driver.core.GuavaCompatibility: Detected Guava >= 19 in the classpath, using modern compatibility layer
+1375 INFO  com.datastax.driver.core.Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+1375 INFO  c.datastax.driver.core.ClockFactory: Using java.lang.System clock to generate timestamps.
+1669 INFO  i.n.util.internal.PlatformDependent: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+1683 WARN  com.datastax.driver.core.NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2753 INFO  c.d.d.c.p.DCAwareRoundRobinPolicy: Using data-center name 'datacenter1' for DCAwareRoundRobinPolicy (if this is incorrect, please provide the correct datacenter name with DCAwareRoundRobinPolicy constructor)
+2758 INFO  com.datastax.driver.core.Cluster: New Cassandra host /127.0.0.1:9042 added
+187083 INFO  cassdemo.backend.BackendSession: All data deleted

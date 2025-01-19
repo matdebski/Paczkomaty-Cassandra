@@ -4,6 +4,7 @@ import java.util.*;
 import java.time.Instant;
 import java.util.stream.Collectors;
 import cassdemo.tables.*;
+import com.datastax.driver.extras.codecs.jdk8.InstantCodec;
 import com.datastax.driver.mapping.Mapper;
 import com.datastax.driver.mapping.MappingManager;
 import org.slf4j.Logger;
@@ -36,6 +37,7 @@ public class BackendSession {
 
 		logger.debug("Backend starting");
 		Cluster cluster = Cluster.builder().addContactPoint(contactPoint).build();
+		cluster.getConfiguration().getCodecRegistry().register(InstantCodec.instance);
 		try {
 			session = cluster.connect(keyspace);
 			manager = new MappingManager(session);
@@ -257,9 +259,6 @@ public class BackendSession {
 		Locker locker=selectLocker(locker_id);
 		Shipment shipment=selectShipment(shipment_id);
 
-		BoundStatement bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-
-
 		Byte shipmentSize = shipment.getBox_size();
 		List<Byte> lockerBoxes = locker.getLocker_boxes();
 
@@ -279,37 +278,87 @@ public class BackendSession {
 			}
 			return sizeCompare;
 		});
-		//toDo
+		List<LockerShipment> lockerShipments= selectAllShipmentsFromLockerById(locker_id);
+
+		//Based on lockerShipments check which lockers from availableIndices are free, not have status  "CONFIRMED"
+
+		Set<Integer> occupiedIndices = lockerShipments.stream()
+				.filter(lockershipment -> lockershipment.getStatus().equals("CONFIRMED"))
+				.map(LockerShipment::getLocker_box_index)
+				.collect(Collectors.toSet());
+
+		availableIndices.removeIf(occupiedIndices::contains);
+		BoundStatement bs;
+		boolean confirmed=false;
 		for (Integer index : availableIndices) {
+			 bs= new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+			 bs.bind(locker_id, shipment_id, index, timestamp, "WAITING",shipment_id,locker_id,index, timestamp, "WAITING");
+			 try {
+				session.execute(bs);
+			 } catch (Exception e) {
+				throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+			 }
 
-			//boolean isOccupied = checkIfLockerBoxIsOccupied(locker_id, index);
-//			if (!isOccupied) {
-//
-//				BoundStatement bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-//				bs.bind(locker_id, shipment_id, index, timestamp, "Waiting");
-//				try {
-//					session.execute(bs);
-//					System.out.println("Shipment successfully inserted into locker.");
-//					return;
-//				} catch (Exception e) {
-//					throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
-//				}
-//			}
+			 confirmed=validateInsert(locker_id,shipment_id,index);
+
+			 if(confirmed) {
+				 bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+				 bs.bind(locker_id, shipment_id, index, timestamp, "CONFIRMED", shipment_id, locker_id, index, timestamp, "CONFIRMED");
+				 try {
+					 session.execute(bs);
+				 } catch (Exception e) {
+					 throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+				 }
+				 break;
+			 }
+			 else{
+				 bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+				 bs.bind(locker_id, shipment_id, index, timestamp, "REJECTED", shipment_id, locker_id, index, timestamp, "REJECTED");
+				 try {
+					 session.execute(bs);
+				 } catch (Exception e) {
+					 throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+				 }
+				 break; //add execute
+
+			 }
 		}
-
-
-
-
-
-		try {
-			session.execute(bs);
-		} catch (Exception e) {
-			throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
-		}
-
-//		logger.info("Inserted user into group");
+		System.out.println("insertResult: "+confirmed);
+		//toDO if confirmed==false - there is no lockerbox available,insertion unsuccesfull
 
 	}
+
+	boolean validateInsert(UUID locker_id, UUID  shipment_id,int index) throws BackendException{
+		List<LockerShipment> lockerShipments= selectAllShipmentsFromLockerById(locker_id);
+
+		Instant timestamp=selectShipmentLocker(shipment_id,locker_id).getAddedAt();
+
+		// Choose shipments assigned to same locker box index
+		List<LockerShipment> filteredShipments = lockerShipments.stream()
+				.filter(shipment -> shipment.getLocker_box_index() == index)
+				.collect(Collectors.toList());
+
+		// Check if any shipment has status Confirmed
+		boolean isOccupied = filteredShipments.stream()
+				.anyMatch(shipment -> shipment.getStatus().equals("CONFIRMED"));
+
+		if (isOccupied) {
+			return false;
+		}
+
+		// Check if any shipment has an earlier timestamp
+		boolean isNotFirst = filteredShipments.stream()
+				.anyMatch(shipment -> shipment.getAddedAt().isBefore(timestamp));
+
+
+		if (isNotFirst) {
+			return false;
+		}
+
+		return true;
+	}
+
+
 
 	public void insertShipmentIntoLocker(UUID locker_id, UUID  shipment_id) throws BackendException{
 
