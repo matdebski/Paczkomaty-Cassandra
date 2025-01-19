@@ -250,6 +250,71 @@ public class BackendSession {
 		logger.info("Shipment " + shipmentName + " inserted with id: " + newUUID+"size: "+boxSize);
 	}
 
+
+	public void insertShipmentIntoLocker(UUID locker_id, UUID  shipment_id, Instant timestamp) throws BackendException {
+		//locker_id, shipment_id, locker_box_index, addedAt, status
+
+		Locker locker=selectLocker(locker_id);
+		Shipment shipment=selectShipment(shipment_id);
+
+		BoundStatement bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+
+
+		Byte shipmentSize = shipment.getBox_size();
+		List<Byte> lockerBoxes = locker.getLocker_boxes();
+
+		//Indexes of lockerBoxes with size>=shipmentsize
+		List<Integer> availableIndices = new ArrayList<>();
+		for (int i = 0; i < lockerBoxes.size(); i++) {
+			if (lockerBoxes.get(i) >= shipmentSize) {
+				availableIndices.add(i);
+			}
+		}
+
+		// Sort by size and random when equal to minimize conflicts
+		availableIndices.sort((a, b) -> {
+			int sizeCompare = lockerBoxes.get(a).compareTo(lockerBoxes.get(b));
+			if (sizeCompare == 0) {
+				return new Random().nextInt(3) - 1;
+			}
+			return sizeCompare;
+		});
+		//toDo
+		for (Integer index : availableIndices) {
+
+			//boolean isOccupied = checkIfLockerBoxIsOccupied(locker_id, index);
+//			if (!isOccupied) {
+//
+//				BoundStatement bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+//				bs.bind(locker_id, shipment_id, index, timestamp, "Waiting");
+//				try {
+//					session.execute(bs);
+//					System.out.println("Shipment successfully inserted into locker.");
+//					return;
+//				} catch (Exception e) {
+//					throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+//				}
+//			}
+		}
+
+
+
+
+
+		try {
+			session.execute(bs);
+		} catch (Exception e) {
+			throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+		}
+
+//		logger.info("Inserted user into group");
+
+	}
+
+	public void insertShipmentIntoLocker(UUID locker_id, UUID  shipment_id) throws BackendException{
+
+		insertShipmentIntoLocker(locker_id,shipment_id,Instant.now());
+	}
 	public void deleteAll() throws BackendException {
 		BoundStatement bs = new BoundStatement(DELETE_ALL_FROM_LOCKERS);
 		BoundStatement bs1 = new BoundStatement(DELETE_ALL_FROM_SHIPMENTS);
