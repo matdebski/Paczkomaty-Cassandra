@@ -380,6 +380,8 @@ public class BackendSession {
 	public int checkLocker(UUID locker_id) throws BackendException {
 		List<LockerShipment> lockerShipments = selectAllShipmentsFromLockerById(locker_id);
 
+		lockerShipments.removeIf(shipment -> !"CONFIRMED".equals(shipment.getStatus()));
+
 		Map<Integer, Long> indexCounts = lockerShipments.stream()
 				.collect(Collectors.groupingBy(LockerShipment::getLocker_box_index, Collectors.counting()));
 
