@@ -1,6 +1,1057 @@
-222  INFO  c.d.driver.core.GuavaCompatibility: Detected Guava >= 19 in the classpath, using modern compatibility layer
-342  INFO  com.datastax.driver.core.Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
-342  INFO  c.datastax.driver.core.ClockFactory: Using java.lang.System clock to generate timestamps.
-408  WARN  com.datastax.driver.core.NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
-720  INFO  c.d.d.c.p.DCAwareRoundRobinPolicy: Using data-center name 'datacenter1' for DCAwareRoundRobinPolicy (if this is incorrect, please provide the correct datacenter name with DCAwareRoundRobinPolicy constructor)
-722  INFO  com.datastax.driver.core.Cluster: New Cassandra host /127.0.0.1:9042 added
+215  INFO  c.d.driver.core.GuavaCompatibility: Detected Guava >= 19 in the classpath, using modern compatibility layer
+333  INFO  com.datastax.driver.core.Native: Could not load JNR C Library, native system calls through this library will not be available (set this logger level to DEBUG to see the full stack trace).
+333  INFO  c.datastax.driver.core.ClockFactory: Using java.lang.System clock to generate timestamps.
+400  WARN  com.datastax.driver.core.NettyUtil: Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+710  INFO  c.d.d.c.p.DCAwareRoundRobinPolicy: Using data-center name 'datacenter1' for DCAwareRoundRobinPolicy (if this is incorrect, please provide the correct datacenter name with DCAwareRoundRobinPolicy constructor)
+712  INFO  com.datastax.driver.core.Cluster: New Cassandra host /127.0.0.1:9042 added
+5798 INFO  cassdemo.backend.BackendSession: All data deleted
+5800 INFO  cassdemo.backend.BackendSession: Locker LOCK1 inserted with id: 37ec0ad7-05be-4cda-b385-009bc5736c76
+5802 INFO  cassdemo.backend.BackendSession: Locker LOCK2 inserted with id: 037e36c5-1f2c-4f09-8b01-bcf95289dbae
+5803 INFO  cassdemo.backend.BackendSession: Locker LOCK3 inserted with id: c7cd2663-5a19-4472-82e9-8dcdd4784506
+5805 INFO  cassdemo.backend.BackendSession: Locker LOCK4 inserted with id: 6d47bdc0-e4df-4fda-bc20-766a4932f7f1
+5806 INFO  cassdemo.backend.BackendSession: Locker LOCK5 inserted with id: 20e25811-288d-48b6-bb96-1652cf106bb1
+5807 INFO  cassdemo.backend.BackendSession: Locker LOCK6 inserted with id: 1d3964d4-772f-48b4-9978-2646212bd046
+5808 INFO  cassdemo.backend.BackendSession: Locker LOCK7 inserted with id: 1cd1b3b6-4550-4fc3-b7d6-c23229893a72
+5809 INFO  cassdemo.backend.BackendSession: Locker LOCK8 inserted with id: 3bcaa448-4b95-450d-8840-afe535f5275a
+5810 INFO  cassdemo.backend.BackendSession: Locker LOCK9 inserted with id: 519837dd-af33-4f85-855f-5c4fd2a63ba5
+5811 INFO  cassdemo.backend.BackendSession: Locker LOCK10 inserted with id: c0d329d3-0d66-49d2-a9c8-30a24997d219
+5813 INFO  cassdemo.backend.BackendSession: Locker LOCK11 inserted with id: 48289f1c-7b95-47e5-9662-5ac610561371
+5814 INFO  cassdemo.backend.BackendSession: Locker LOCK12 inserted with id: d18f1908-467f-451b-93f7-3f4e2af1d9dd
+5815 INFO  cassdemo.backend.BackendSession: Locker LOCK13 inserted with id: 6a022bfc-4bf5-400c-8255-0ee689dccb4f
+5816 INFO  cassdemo.backend.BackendSession: Locker LOCK14 inserted with id: a1737301-b0e4-4016-b5ef-c84b35497135
+5818 INFO  cassdemo.backend.BackendSession: Locker LOCK15 inserted with id: 06412b13-ae24-473a-a63e-228401c88c32
+5819 INFO  cassdemo.backend.BackendSession: Locker LOCK16 inserted with id: 69d54d95-2638-40fd-938f-e8dd806809dd
+5820 INFO  cassdemo.backend.BackendSession: Locker LOCK17 inserted with id: 0e20a1b5-5486-4e09-986e-94e29f09edff
+5821 INFO  cassdemo.backend.BackendSession: Locker LOCK18 inserted with id: d5058e9f-107d-47df-ab9a-479a6db9c5d7
+5822 INFO  cassdemo.backend.BackendSession: Locker LOCK19 inserted with id: e948e58e-cf96-4b2a-86d3-b6b8913ea3fc
+5823 INFO  cassdemo.backend.BackendSession: Locker LOCK20 inserted with id: a0f760f1-4e50-4b50-9973-bf1ba066e9a2
+5824 INFO  cassdemo.backend.BackendSession: Locker LOCK21 inserted with id: 0fa61f85-32cd-46a1-b34b-985beb5aac94
+5825 INFO  cassdemo.backend.BackendSession: Locker LOCK22 inserted with id: 69869edb-6167-448e-ae70-f4f258e9460b
+5826 INFO  cassdemo.backend.BackendSession: Locker LOCK23 inserted with id: 223d45e8-49f1-4f5a-b6f6-f3c06f31bd03
+5827 INFO  cassdemo.backend.BackendSession: Locker LOCK24 inserted with id: f3ecf088-bc89-4af2-9630-7e2ba6ec7f2b
+5829 INFO  cassdemo.backend.BackendSession: Locker LOCK25 inserted with id: 92665e99-e2cc-4036-91ee-872633f05d6b
+5830 INFO  cassdemo.backend.BackendSession: Locker LOCK26 inserted with id: d4a17d49-5b9b-4b5a-a235-42fece72a57e
+5831 INFO  cassdemo.backend.BackendSession: Locker LOCK27 inserted with id: b0b93c91-4acb-4a21-bd17-dfc329dded84
+5832 INFO  cassdemo.backend.BackendSession: Locker LOCK28 inserted with id: c18fcc8a-107d-4aaa-8b79-c367a8b12e0a
+5833 INFO  cassdemo.backend.BackendSession: Locker LOCK29 inserted with id: 0a853b09-d7f4-44d8-8392-862ea96d976f
+5835 INFO  cassdemo.backend.BackendSession: Locker LOCK30 inserted with id: e9e03994-e41b-4c2b-a302-92b83a57cb5a
+5836 INFO  cassdemo.backend.BackendSession: Locker LOCK31 inserted with id: 18c4c8c0-926d-4549-968d-72f4dc5dc78b
+5837 INFO  cassdemo.backend.BackendSession: Locker LOCK32 inserted with id: 5d1a2975-9df8-4a92-98a3-8a03350663c0
+5838 INFO  cassdemo.backend.BackendSession: Locker LOCK33 inserted with id: 13e62d3d-7dfc-4e19-949a-28ccd0c30782
+5839 INFO  cassdemo.backend.BackendSession: Locker LOCK34 inserted with id: 7253ab8e-dfb3-4869-bb5b-7566c15d8b67
+5840 INFO  cassdemo.backend.BackendSession: Locker LOCK35 inserted with id: 3ffcee93-6661-4520-9b1f-ff5f3b367c8c
+5841 INFO  cassdemo.backend.BackendSession: Locker LOCK36 inserted with id: 6685cd57-5894-4e78-a125-c331e0ad9f01
+5842 INFO  cassdemo.backend.BackendSession: Locker LOCK37 inserted with id: dae87d50-fbb8-4bbf-9b7f-0c49b3ace7a0
+5843 INFO  cassdemo.backend.BackendSession: Locker LOCK38 inserted with id: acc8aa80-0d4f-4d31-9baa-0e0c105a93c3
+5845 INFO  cassdemo.backend.BackendSession: Locker LOCK39 inserted with id: f99586c0-b4a4-4ff2-a873-1819fb7261cd
+5846 INFO  cassdemo.backend.BackendSession: Locker LOCK40 inserted with id: c525d511-396f-44ad-9e6a-ea2fd227d83a
+5847 INFO  cassdemo.backend.BackendSession: Locker LOCK41 inserted with id: 88146019-09d2-4e27-9749-313b5a8ed9bb
+5848 INFO  cassdemo.backend.BackendSession: Locker LOCK42 inserted with id: 35c9a492-6aea-4c80-a4ac-46d0f3b01cc9
+5849 INFO  cassdemo.backend.BackendSession: Locker LOCK43 inserted with id: 4a26bfb1-7648-430e-ae5c-6531835d33f5
+5850 INFO  cassdemo.backend.BackendSession: Locker LOCK44 inserted with id: a64881ff-6b59-484d-820d-03a331a64b3b
+5851 INFO  cassdemo.backend.BackendSession: Locker LOCK45 inserted with id: 8e936c63-98cf-48bf-9187-8b47cf0ff0cf
+5853 INFO  cassdemo.backend.BackendSession: Locker LOCK46 inserted with id: 7fbb8efc-fd8d-4bf4-b7d7-53b1d133cf7b
+5854 INFO  cassdemo.backend.BackendSession: Locker LOCK47 inserted with id: d7f72d7e-4276-4b1e-854f-af6fe387bb60
+5855 INFO  cassdemo.backend.BackendSession: Locker LOCK48 inserted with id: daf3cd05-221a-48a6-9b44-131dfdf17bd9
+5856 INFO  cassdemo.backend.BackendSession: Locker LOCK49 inserted with id: bef993ef-efbe-414e-a4ea-7e1bf2ad1722
+5857 INFO  cassdemo.backend.BackendSession: Locker LOCK50 inserted with id: 1cb04bab-787c-47d1-9331-9e93adb169f4
+5858 INFO  cassdemo.backend.BackendSession: Locker LOCK51 inserted with id: cbc242eb-6b0c-4a57-a9b5-32a65845dbcd
+5860 INFO  cassdemo.backend.BackendSession: Locker LOCK52 inserted with id: 1974dd99-8ca3-4dab-80e0-985c37fa9d5f
+5861 INFO  cassdemo.backend.BackendSession: Locker LOCK53 inserted with id: f6e09b1f-8d1c-415a-96bb-a08c1d69e9d7
+5862 INFO  cassdemo.backend.BackendSession: Locker LOCK54 inserted with id: 9946c6d4-d24d-4e9f-9a32-f5f1533695e5
+5863 INFO  cassdemo.backend.BackendSession: Locker LOCK55 inserted with id: adb32744-e808-4249-857e-af4f3d7a0a83
+5864 INFO  cassdemo.backend.BackendSession: Locker LOCK56 inserted with id: ff7f49ca-f95b-4640-bcaf-0587d1a15088
+5865 INFO  cassdemo.backend.BackendSession: Locker LOCK57 inserted with id: 173feee7-8299-48cb-b0bb-8a131b4613bb
+5866 INFO  cassdemo.backend.BackendSession: Locker LOCK58 inserted with id: 1cc40d98-9cb6-42fd-bf92-f3f358bbb526
+5867 INFO  cassdemo.backend.BackendSession: Locker LOCK59 inserted with id: d73b8616-fae1-45da-81dc-28dbea43b08c
+5868 INFO  cassdemo.backend.BackendSession: Locker LOCK60 inserted with id: 2fedd270-3b24-42d7-b887-a62e57dcd19b
+5870 INFO  cassdemo.backend.BackendSession: Locker LOCK61 inserted with id: 63465854-1714-483e-81ae-1866835cc515
+5871 INFO  cassdemo.backend.BackendSession: Locker LOCK62 inserted with id: aa1076f6-b399-4a4e-a8a0-42b00090d510
+5872 INFO  cassdemo.backend.BackendSession: Locker LOCK63 inserted with id: fdd45658-a956-4f79-a784-c6afe016692b
+5873 INFO  cassdemo.backend.BackendSession: Locker LOCK64 inserted with id: 8d793c65-2122-4508-bc4a-484d91d28914
+5874 INFO  cassdemo.backend.BackendSession: Locker LOCK65 inserted with id: 1c33c9fb-64f5-4d3c-ad0e-95fe1a91328f
+5875 INFO  cassdemo.backend.BackendSession: Locker LOCK66 inserted with id: 6a1475c4-e1c9-411b-b650-a9fec4d812f6
+5876 INFO  cassdemo.backend.BackendSession: Locker LOCK67 inserted with id: 3feb99c1-578e-4726-b354-e585dbbcf545
+5877 INFO  cassdemo.backend.BackendSession: Locker LOCK68 inserted with id: 85549b45-441d-4843-9fd8-a530a84b00e1
+5878 INFO  cassdemo.backend.BackendSession: Locker LOCK69 inserted with id: 4f0cdcc5-a927-41d1-9382-d194b0d39544
+5879 INFO  cassdemo.backend.BackendSession: Locker LOCK70 inserted with id: 305f186b-7fe7-464e-8753-f06e8f7a82dd
+5880 INFO  cassdemo.backend.BackendSession: Locker LOCK71 inserted with id: 58355ca8-5573-4e77-820f-6bf40726a4ab
+5881 INFO  cassdemo.backend.BackendSession: Locker LOCK72 inserted with id: a139bed3-e126-4e97-a4d7-5c4c89e8f4f1
+5882 INFO  cassdemo.backend.BackendSession: Locker LOCK73 inserted with id: ffca75a2-8dc7-4e67-a033-c27c80605c8f
+5883 INFO  cassdemo.backend.BackendSession: Locker LOCK74 inserted with id: e9a1e052-62de-4190-a01f-09b657b54fe7
+5884 INFO  cassdemo.backend.BackendSession: Locker LOCK75 inserted with id: cbb49e97-5f00-41fa-8664-9ec8c66738f6
+5885 INFO  cassdemo.backend.BackendSession: Locker LOCK76 inserted with id: 9019ff14-8135-4e5f-a5b7-ac67783d9cc1
+5886 INFO  cassdemo.backend.BackendSession: Locker LOCK77 inserted with id: d8951b4c-0771-443a-9c55-63bfefd1775c
+5887 INFO  cassdemo.backend.BackendSession: Locker LOCK78 inserted with id: e069c330-a2e6-4a98-b4d6-f4975c524ae4
+5888 INFO  cassdemo.backend.BackendSession: Locker LOCK79 inserted with id: d030d57c-817c-4e2d-b279-901f7807e53f
+5889 INFO  cassdemo.backend.BackendSession: Locker LOCK80 inserted with id: 204a10ab-c315-4e65-b22c-a349b1087284
+5890 INFO  cassdemo.backend.BackendSession: Locker LOCK81 inserted with id: c9a025eb-2784-4273-abba-cad1ddd31b70
+5891 INFO  cassdemo.backend.BackendSession: Locker LOCK82 inserted with id: e33355eb-2d92-466f-8872-2ab4f60d764c
+5891 INFO  cassdemo.backend.BackendSession: Locker LOCK83 inserted with id: da705891-b132-4c7f-b15e-4a28b847171d
+5893 INFO  cassdemo.backend.BackendSession: Locker LOCK84 inserted with id: 0782b1d4-cd69-4903-805d-9ce2881ce754
+5894 INFO  cassdemo.backend.BackendSession: Locker LOCK85 inserted with id: 6580a508-f156-45cb-beab-ebee5acddee3
+5895 INFO  cassdemo.backend.BackendSession: Locker LOCK86 inserted with id: a0daaa20-260f-42ce-89a4-3022c3eaee0e
+5896 INFO  cassdemo.backend.BackendSession: Locker LOCK87 inserted with id: be5b6e97-cc0e-4812-9128-1e4daef9d303
+5898 INFO  cassdemo.backend.BackendSession: Locker LOCK88 inserted with id: cd4cec77-b886-4f57-be34-946cceb6280d
+5899 INFO  cassdemo.backend.BackendSession: Locker LOCK89 inserted with id: 0e1ad5e4-1438-442a-8042-89dda6ff9140
+5900 INFO  cassdemo.backend.BackendSession: Locker LOCK90 inserted with id: ddd89125-af51-427b-ad81-7b4d3de02f31
+5901 INFO  cassdemo.backend.BackendSession: Locker LOCK91 inserted with id: 83fe37d3-38c6-4e0c-a00c-64520bbad603
+5902 INFO  cassdemo.backend.BackendSession: Locker LOCK92 inserted with id: e72b57e0-3242-49e7-9e3d-9f336fe3b0bd
+5903 INFO  cassdemo.backend.BackendSession: Locker LOCK93 inserted with id: f8dea480-92be-4f66-ab66-aa6edb10a643
+5903 INFO  cassdemo.backend.BackendSession: Locker LOCK94 inserted with id: 3bdde3a4-ea88-437d-8f31-b5ca2a62e880
+5904 INFO  cassdemo.backend.BackendSession: Locker LOCK95 inserted with id: aee12f62-af00-4b57-957d-82b84e2a4cf4
+5905 INFO  cassdemo.backend.BackendSession: Locker LOCK96 inserted with id: 5998f7ae-a791-4656-9316-25b5a783780b
+5906 INFO  cassdemo.backend.BackendSession: Locker LOCK97 inserted with id: 8e46097c-6f7e-42b9-93b6-1f0d078171b8
+5908 INFO  cassdemo.backend.BackendSession: Locker LOCK98 inserted with id: 9ccab708-4629-4b6e-b9e6-d5d17cc5c3d5
+5909 INFO  cassdemo.backend.BackendSession: Locker LOCK99 inserted with id: 538f33fe-75c2-4648-9336-6023ed075ea5
+5910 INFO  cassdemo.backend.BackendSession: Locker LOCK100 inserted with id: 54549c34-1f44-4837-8fc3-5f398ef463b4
+5911 INFO  cassdemo.backend.BackendSession: Locker LOCK101 inserted with id: 48165290-b0d4-4df3-82f9-9a5effe15e2a
+5912 INFO  cassdemo.backend.BackendSession: Locker LOCK102 inserted with id: e733d69e-403e-44f6-86a9-be9acdb2f447
+5913 INFO  cassdemo.backend.BackendSession: Locker LOCK103 inserted with id: a08feda8-addb-4f0d-b0f5-cf9d2ee93fc1
+5913 INFO  cassdemo.backend.BackendSession: Locker LOCK104 inserted with id: 6eca416e-9adf-49b9-b243-bfa5cbc4ac08
+5915 INFO  cassdemo.backend.BackendSession: Locker LOCK105 inserted with id: 83af9513-238e-443b-9284-9a103c6e5048
+5916 INFO  cassdemo.backend.BackendSession: Locker LOCK106 inserted with id: 5641f690-09db-4c52-a7a9-9c27130fb1ca
+5917 INFO  cassdemo.backend.BackendSession: Locker LOCK107 inserted with id: 5bc94c46-d9b5-4e4e-bff7-38b086bcd01b
+5917 INFO  cassdemo.backend.BackendSession: Locker LOCK108 inserted with id: f7503f6e-f8ab-4c90-ac00-8466ab31d7ee
+5918 INFO  cassdemo.backend.BackendSession: Locker LOCK109 inserted with id: f257ed4e-ca00-49ca-bf50-84a3681a7415
+5919 INFO  cassdemo.backend.BackendSession: Locker LOCK110 inserted with id: 61fa77ff-9fb3-4b2d-bf52-d5b8512edbfa
+5920 INFO  cassdemo.backend.BackendSession: Locker LOCK111 inserted with id: d8e32bdd-6bd5-4d7f-8854-f23ce848f2f7
+5921 INFO  cassdemo.backend.BackendSession: Locker LOCK112 inserted with id: e2a42ec3-388c-44e8-834a-935ea6ae4ab9
+5922 INFO  cassdemo.backend.BackendSession: Locker LOCK113 inserted with id: 9c9c3f88-ed3e-4483-b245-b20d590666be
+5924 INFO  cassdemo.backend.BackendSession: Locker LOCK114 inserted with id: 3ac361ea-b92d-4bae-ac25-4ee097f48c21
+5924 INFO  cassdemo.backend.BackendSession: Locker LOCK115 inserted with id: edcac24e-bbd3-4f90-98fa-a156a92c3d7a
+5925 INFO  cassdemo.backend.BackendSession: Locker LOCK116 inserted with id: 11955027-b80d-4310-8159-59e38e607283
+5926 INFO  cassdemo.backend.BackendSession: Locker LOCK117 inserted with id: 414bc371-7bf5-4c8e-9a57-4c5f1ee6b193
+5927 INFO  cassdemo.backend.BackendSession: Locker LOCK118 inserted with id: e7806ff1-816a-4375-ab6f-b553583cdbaa
+5928 INFO  cassdemo.backend.BackendSession: Locker LOCK119 inserted with id: 83b0c455-0bdf-4378-a7f9-00f77c62812e
+5929 INFO  cassdemo.backend.BackendSession: Locker LOCK120 inserted with id: 39118c39-6250-470e-b639-f9753b09645f
+5930 INFO  cassdemo.backend.BackendSession: Locker LOCK121 inserted with id: 851189d9-2060-4b61-ba14-b83679624529
+5931 INFO  cassdemo.backend.BackendSession: Locker LOCK122 inserted with id: a6bd0b5f-05fa-4ebd-ae19-22796a5c47c0
+5932 INFO  cassdemo.backend.BackendSession: Locker LOCK123 inserted with id: a63389bd-872e-41b6-9988-13252017f869
+5933 INFO  cassdemo.backend.BackendSession: Locker LOCK124 inserted with id: 43a23838-fdbf-4e5f-b6bb-d00ca10fb2da
+5935 INFO  cassdemo.backend.BackendSession: Locker LOCK125 inserted with id: ef709433-b80b-4848-b0fd-84f7bb2fbb16
+5935 INFO  cassdemo.backend.BackendSession: Locker LOCK126 inserted with id: 81ed3e55-e4e2-4354-8a6b-a5c2f5532fc5
+5936 INFO  cassdemo.backend.BackendSession: Locker LOCK127 inserted with id: 3cd69940-48f0-41ee-8ccf-f618bd3871b2
+5937 INFO  cassdemo.backend.BackendSession: Locker LOCK128 inserted with id: e9d84570-595c-4a53-ad96-948448948563
+5938 INFO  cassdemo.backend.BackendSession: Locker LOCK129 inserted with id: e78e83d8-0c06-4b17-8ee4-adff0e6436e9
+5939 INFO  cassdemo.backend.BackendSession: Locker LOCK130 inserted with id: b34f331a-6947-4453-a14e-f1930944b924
+5940 INFO  cassdemo.backend.BackendSession: Locker LOCK131 inserted with id: 280fb5fc-bb49-475b-a02c-ccf33862e205
+5941 INFO  cassdemo.backend.BackendSession: Locker LOCK132 inserted with id: 7cd32ad9-4ef0-4534-9d51-c86a0061c48b
+5942 INFO  cassdemo.backend.BackendSession: Locker LOCK133 inserted with id: 31a2680d-5d25-4de0-aaa6-3988623eb466
+5943 INFO  cassdemo.backend.BackendSession: Locker LOCK134 inserted with id: c4b10a24-3c12-4ac1-b014-7eae2f6337f0
+5944 INFO  cassdemo.backend.BackendSession: Locker LOCK135 inserted with id: 9c0c10f4-93b5-4653-80d3-06fd63011a08
+5945 INFO  cassdemo.backend.BackendSession: Locker LOCK136 inserted with id: 5a6a3ca5-074f-4918-9f2e-9543b1c01f25
+5946 INFO  cassdemo.backend.BackendSession: Locker LOCK137 inserted with id: 561ba722-1f10-4d31-9556-f8e925649f92
+5947 INFO  cassdemo.backend.BackendSession: Locker LOCK138 inserted with id: 91a93b5d-3b4e-4bee-ae41-9338f18dd4a9
+5948 INFO  cassdemo.backend.BackendSession: Locker LOCK139 inserted with id: 8a04192f-8854-4e33-a874-c95b24df735b
+5949 INFO  cassdemo.backend.BackendSession: Locker LOCK140 inserted with id: 0020718c-b1fd-463b-a8b3-e2aa6360897e
+5950 INFO  cassdemo.backend.BackendSession: Locker LOCK141 inserted with id: a05244a4-ad51-4ac2-b0b0-29e12072f923
+5951 INFO  cassdemo.backend.BackendSession: Locker LOCK142 inserted with id: ef22f882-0aee-4451-9fb0-34d9f7976ff5
+5952 INFO  cassdemo.backend.BackendSession: Locker LOCK143 inserted with id: bd9c3bb1-9ffc-4428-b8b6-d7fea4ed2d65
+5953 INFO  cassdemo.backend.BackendSession: Locker LOCK144 inserted with id: fb18bbc3-665d-4af0-a941-7742280c1e65
+5954 INFO  cassdemo.backend.BackendSession: Locker LOCK145 inserted with id: 1c8a7f29-bb07-40a5-87bc-45a8d9252f3b
+5955 INFO  cassdemo.backend.BackendSession: Locker LOCK146 inserted with id: 28f18cc5-d971-4c79-923e-a0a6140b87d0
+5956 INFO  cassdemo.backend.BackendSession: Locker LOCK147 inserted with id: c0c0c4fc-38e8-4468-9193-d0229a6a1d48
+5957 INFO  cassdemo.backend.BackendSession: Locker LOCK148 inserted with id: 3202e46a-b0d2-49fd-925d-616f15512cf8
+5958 INFO  cassdemo.backend.BackendSession: Locker LOCK149 inserted with id: ce8f96e1-89ce-4316-8fb9-c40fd724f917
+5959 INFO  cassdemo.backend.BackendSession: Locker LOCK150 inserted with id: 108a1eac-ecb1-4ef8-bc41-446720e5c50f
+5960 INFO  cassdemo.backend.BackendSession: Locker LOCK151 inserted with id: 03270ed6-a61a-43e8-a324-138ef350a311
+5961 INFO  cassdemo.backend.BackendSession: Locker LOCK152 inserted with id: b6bb8000-f96e-4dc6-830c-3b772301004f
+5963 INFO  cassdemo.backend.BackendSession: Locker LOCK153 inserted with id: 4dc6f45d-1c20-439b-b314-f41354d53952
+5964 INFO  cassdemo.backend.BackendSession: Locker LOCK154 inserted with id: bd7cae10-b9a1-4698-8963-a466ffae06bb
+5965 INFO  cassdemo.backend.BackendSession: Locker LOCK155 inserted with id: b95cdd6a-5710-4bed-ac7d-873af2874ec0
+5966 INFO  cassdemo.backend.BackendSession: Locker LOCK156 inserted with id: 95a680e8-aa62-446e-9696-6c98e8154bc7
+5967 INFO  cassdemo.backend.BackendSession: Locker LOCK157 inserted with id: 2ed8fa9e-acd1-452f-a7dd-3de9f29d57a7
+5967 INFO  cassdemo.backend.BackendSession: Locker LOCK158 inserted with id: 89fbac11-9020-4e41-be0c-08c4b2d7a62a
+5968 INFO  cassdemo.backend.BackendSession: Locker LOCK159 inserted with id: 7a6bfc75-849e-4743-83b6-bc6c7a7c87e2
+5969 INFO  cassdemo.backend.BackendSession: Locker LOCK160 inserted with id: e2d3db2a-ebd6-4640-bcc1-e1a7094c001f
+5970 INFO  cassdemo.backend.BackendSession: Locker LOCK161 inserted with id: 331cad1c-bc31-43d7-af31-52f77b605ff4
+5971 INFO  cassdemo.backend.BackendSession: Locker LOCK162 inserted with id: 2eba3193-a303-4bfd-ab97-98ba295410c1
+5972 INFO  cassdemo.backend.BackendSession: Locker LOCK163 inserted with id: 6999b7a0-66b7-46d3-afc1-c70252ffd639
+5974 INFO  cassdemo.backend.BackendSession: Locker LOCK164 inserted with id: f839de8e-2c9c-4ec5-a088-c133adab8da4
+5975 INFO  cassdemo.backend.BackendSession: Locker LOCK165 inserted with id: c7575742-8a9a-4986-960b-b78fd98e464e
+5976 INFO  cassdemo.backend.BackendSession: Locker LOCK166 inserted with id: 2614d93e-9519-47aa-828a-8fbf94ef5c4e
+5977 INFO  cassdemo.backend.BackendSession: Locker LOCK167 inserted with id: 8588ff4c-2783-452c-9603-7195b0078371
+5978 INFO  cassdemo.backend.BackendSession: Locker LOCK168 inserted with id: ad326f39-7fed-4c07-9e0e-ec83861b37ef
+5978 INFO  cassdemo.backend.BackendSession: Locker LOCK169 inserted with id: 0a72ebea-b064-4da9-961e-5d1ef310acaf
+5979 INFO  cassdemo.backend.BackendSession: Locker LOCK170 inserted with id: bdaa0861-1067-47aa-81bf-00db4e3de5db
+5980 INFO  cassdemo.backend.BackendSession: Locker LOCK171 inserted with id: a5f594be-a8cc-4f03-b164-61699eabbad7
+5981 INFO  cassdemo.backend.BackendSession: Locker LOCK172 inserted with id: 0c7eb270-7f4e-41c6-a9d1-c54a70b81cfb
+5982 INFO  cassdemo.backend.BackendSession: Locker LOCK173 inserted with id: a179b90c-0bfb-467e-add4-fcf319e5eb7a
+5983 INFO  cassdemo.backend.BackendSession: Locker LOCK174 inserted with id: 728f09ae-ac83-4029-b590-a0eb151b8a83
+5984 INFO  cassdemo.backend.BackendSession: Locker LOCK175 inserted with id: 97c1ce5e-005a-46b7-9d0f-27117693f1bd
+5985 INFO  cassdemo.backend.BackendSession: Locker LOCK176 inserted with id: 13ef41b4-307d-444b-84a1-f1dbcd069961
+5986 INFO  cassdemo.backend.BackendSession: Locker LOCK177 inserted with id: 660895f9-f995-4241-94ed-c16ce2a69edd
+5987 INFO  cassdemo.backend.BackendSession: Locker LOCK178 inserted with id: 54e0c345-8e6c-4e1f-8af6-991afd39fb61
+5988 INFO  cassdemo.backend.BackendSession: Locker LOCK179 inserted with id: 1ad66263-36b8-4111-9a1a-6695e980ef78
+5989 INFO  cassdemo.backend.BackendSession: Locker LOCK180 inserted with id: db150104-8f86-4349-953e-a0ec392c3bbc
+5990 INFO  cassdemo.backend.BackendSession: Locker LOCK181 inserted with id: 62293761-7fc5-4b21-ad62-d68c9d45f92e
+5991 INFO  cassdemo.backend.BackendSession: Locker LOCK182 inserted with id: 84e1538c-099d-452c-b363-bd846b8bac4b
+5992 INFO  cassdemo.backend.BackendSession: Locker LOCK183 inserted with id: c0b2c722-884a-42d4-af7c-50ce67a93f12
+5993 INFO  cassdemo.backend.BackendSession: Locker LOCK184 inserted with id: 337dda1b-ab04-4fb3-960c-729e41de379d
+5994 INFO  cassdemo.backend.BackendSession: Locker LOCK185 inserted with id: e009df4b-d3b1-4229-966d-99562bc49a50
+5995 INFO  cassdemo.backend.BackendSession: Locker LOCK186 inserted with id: c40a24c1-3e8e-4b2e-b38c-0ec9721396eb
+5996 INFO  cassdemo.backend.BackendSession: Locker LOCK187 inserted with id: b53d2a30-1005-4b20-bd91-250313cac23d
+5997 INFO  cassdemo.backend.BackendSession: Locker LOCK188 inserted with id: 80785810-c0a6-4f01-ae5a-03e7b2a8290b
+5998 INFO  cassdemo.backend.BackendSession: Locker LOCK189 inserted with id: ef40272f-64fb-46a9-bd4a-4323519109d4
+5999 INFO  cassdemo.backend.BackendSession: Locker LOCK190 inserted with id: fbddbbaf-eb77-4ad2-a683-cbb3d42dabed
+6000 INFO  cassdemo.backend.BackendSession: Locker LOCK191 inserted with id: 935fc8c9-4a0f-486f-af5c-5d691dfe38bd
+6001 INFO  cassdemo.backend.BackendSession: Locker LOCK192 inserted with id: aa2a9568-9d7b-4303-bc71-aa72d7f63e8b
+6002 INFO  cassdemo.backend.BackendSession: Locker LOCK193 inserted with id: da18b0da-5bdb-44db-9d0f-fedf09777aa7
+6003 INFO  cassdemo.backend.BackendSession: Locker LOCK194 inserted with id: 3f995468-deea-4ef2-891a-6f1fcf208d47
+6004 INFO  cassdemo.backend.BackendSession: Locker LOCK195 inserted with id: fe054cfd-8d91-49e6-a63d-a1d5495125aa
+6005 INFO  cassdemo.backend.BackendSession: Locker LOCK196 inserted with id: 291422fd-2b40-41c2-9712-63321bfbe246
+6005 INFO  cassdemo.backend.BackendSession: Locker LOCK197 inserted with id: 9eda466b-a359-42f0-9858-1ec0dc9d7d32
+6007 INFO  cassdemo.backend.BackendSession: Locker LOCK198 inserted with id: c27b0e2e-dd2b-4d20-b7a3-3f1a73970e94
+6008 INFO  cassdemo.backend.BackendSession: Locker LOCK199 inserted with id: 3a89ce92-11f0-4c70-baf5-0489d5f1cde5
+6009 INFO  cassdemo.backend.BackendSession: Locker LOCK200 inserted with id: 70efcb94-eabe-4401-9687-0640b7f43e31
+6009 INFO  cassdemo.backend.BackendSession: Locker LOCK201 inserted with id: 6536339c-b71c-4dfb-9f1d-a3acc35b6878
+6010 INFO  cassdemo.backend.BackendSession: Locker LOCK202 inserted with id: 40428ad2-7485-4af5-a8c6-b26cecdc792a
+6011 INFO  cassdemo.backend.BackendSession: Locker LOCK203 inserted with id: 2adc35f2-f134-41d5-9701-45d5b4a07e65
+6012 INFO  cassdemo.backend.BackendSession: Locker LOCK204 inserted with id: 8cc7faf2-c00a-4bb6-98a6-13c971f88884
+6013 INFO  cassdemo.backend.BackendSession: Locker LOCK205 inserted with id: b802e155-7a06-41ba-b54c-5c3ca0b8ed4a
+6014 INFO  cassdemo.backend.BackendSession: Locker LOCK206 inserted with id: d0f28c65-2cee-48e1-ab4c-7b92218a1482
+6015 INFO  cassdemo.backend.BackendSession: Locker LOCK207 inserted with id: 53288c0a-0416-4201-8462-5d9a5fff0be7
+6016 INFO  cassdemo.backend.BackendSession: Locker LOCK208 inserted with id: f2e6242d-e79c-4e3a-b982-fe2d2d8410d8
+6017 INFO  cassdemo.backend.BackendSession: Locker LOCK209 inserted with id: 79042dcc-c754-47bb-84c8-c8d713c543d1
+6018 INFO  cassdemo.backend.BackendSession: Locker LOCK210 inserted with id: b9b88c40-1b39-474b-aa93-63318a7e7802
+6019 INFO  cassdemo.backend.BackendSession: Locker LOCK211 inserted with id: 6b0f1423-a874-42b4-8c72-8fd5e64c5ae0
+6020 INFO  cassdemo.backend.BackendSession: Locker LOCK212 inserted with id: f07cc4dc-9d7d-44f9-a446-38821e2ae6f7
+6021 INFO  cassdemo.backend.BackendSession: Locker LOCK213 inserted with id: adb14a7f-7734-4541-9738-c339dbdb0f43
+6022 INFO  cassdemo.backend.BackendSession: Locker LOCK214 inserted with id: a7559d64-9374-47d4-b740-5a2dcbf8bea6
+6023 INFO  cassdemo.backend.BackendSession: Locker LOCK215 inserted with id: 38bf596c-a165-498f-bdb8-c3ab673c6839
+6023 INFO  cassdemo.backend.BackendSession: Locker LOCK216 inserted with id: 60f2272e-407e-4613-bb5c-7e2280ee0bd7
+6024 INFO  cassdemo.backend.BackendSession: Locker LOCK217 inserted with id: 8617b6ca-0079-45e5-8e48-84885e5dbdb7
+6026 INFO  cassdemo.backend.BackendSession: Locker LOCK218 inserted with id: 98947a3d-25a3-4cb5-9f52-0727319f35d6
+6027 INFO  cassdemo.backend.BackendSession: Locker LOCK219 inserted with id: 502a4ecb-6724-492a-8e71-d602a3bc60db
+6028 INFO  cassdemo.backend.BackendSession: Locker LOCK220 inserted with id: 5349d478-cb3d-43e9-a290-dcffab6a14a1
+6029 INFO  cassdemo.backend.BackendSession: Locker LOCK221 inserted with id: cc317d60-ea9c-46ff-97c3-3089b72b1540
+6029 INFO  cassdemo.backend.BackendSession: Locker LOCK222 inserted with id: d3de9eab-7b86-4a59-aab4-b67f26f3e783
+6030 INFO  cassdemo.backend.BackendSession: Locker LOCK223 inserted with id: ca6dd253-4fbc-41f3-85eb-14a1ca2b2ea1
+6031 INFO  cassdemo.backend.BackendSession: Locker LOCK224 inserted with id: 1f18966e-6336-4b14-9a6a-72f656f11af6
+6032 INFO  cassdemo.backend.BackendSession: Locker LOCK225 inserted with id: 44fee013-a70b-4719-93e3-64d11ca549ef
+6033 INFO  cassdemo.backend.BackendSession: Locker LOCK226 inserted with id: 82b924f0-bb9d-4dec-8beb-ceee8a07c369
+6035 INFO  cassdemo.backend.BackendSession: Locker LOCK227 inserted with id: 1b778506-6991-4868-97de-8c6504c60fd1
+6035 INFO  cassdemo.backend.BackendSession: Locker LOCK228 inserted with id: 1cc12870-52e8-42d9-8223-cab3964ba68e
+6037 INFO  cassdemo.backend.BackendSession: Locker LOCK229 inserted with id: 16772123-35bf-4e32-a7f9-f5c40a8c8ff3
+6038 INFO  cassdemo.backend.BackendSession: Locker LOCK230 inserted with id: 0f0e3c30-39f8-48a2-a78d-b79dfe509376
+6039 INFO  cassdemo.backend.BackendSession: Locker LOCK231 inserted with id: e316bda6-bde5-4d7d-8346-92f7a0f1857a
+6040 INFO  cassdemo.backend.BackendSession: Locker LOCK232 inserted with id: 36fc10bd-5218-457a-a88f-3a2a2fc163e0
+6041 INFO  cassdemo.backend.BackendSession: Locker LOCK233 inserted with id: 19a55e88-e6dc-4ce1-b7ec-91bab64d989f
+6042 INFO  cassdemo.backend.BackendSession: Locker LOCK234 inserted with id: 7d22f433-95dd-4e90-a6d5-dcb3f9ac7fce
+6042 INFO  cassdemo.backend.BackendSession: Locker LOCK235 inserted with id: d357a9e7-2bc3-49da-89f2-cc0a4a686b6d
+6043 INFO  cassdemo.backend.BackendSession: Locker LOCK236 inserted with id: 2e735d4d-4add-4c3b-b656-6d811f43372f
+6044 INFO  cassdemo.backend.BackendSession: Locker LOCK237 inserted with id: 797bdc53-4117-481c-b4f8-e8377757be70
+6045 INFO  cassdemo.backend.BackendSession: Locker LOCK238 inserted with id: e7d3bff0-3f1f-430b-a3f6-eacfeddbde9e
+6046 INFO  cassdemo.backend.BackendSession: Locker LOCK239 inserted with id: 2b7a773e-8eac-4f35-9f39-5e3ea35fd014
+6048 INFO  cassdemo.backend.BackendSession: Locker LOCK240 inserted with id: c1e3919b-8915-4ec8-8784-9a153bb1628f
+6049 INFO  cassdemo.backend.BackendSession: Locker LOCK241 inserted with id: a661ba73-92b9-4708-9dfe-07fd92e75b72
+6049 INFO  cassdemo.backend.BackendSession: Locker LOCK242 inserted with id: 3723f4d3-403e-474e-8963-fddf232f8332
+6050 INFO  cassdemo.backend.BackendSession: Locker LOCK243 inserted with id: 30b244c6-d04a-4742-ab1d-c5b2916b5ea5
+6051 INFO  cassdemo.backend.BackendSession: Locker LOCK244 inserted with id: 81babbd3-e3cb-47ec-96f9-28cfb81810dc
+6052 INFO  cassdemo.backend.BackendSession: Locker LOCK245 inserted with id: 693f285d-09e8-4e0d-a35d-de1e931b20de
+6053 INFO  cassdemo.backend.BackendSession: Locker LOCK246 inserted with id: 15bdd9a2-cbbc-4826-89f0-2aa4abb8260b
+6054 INFO  cassdemo.backend.BackendSession: Locker LOCK247 inserted with id: 5c4362bd-24a5-4bab-a06d-104474da0c3b
+6055 INFO  cassdemo.backend.BackendSession: Locker LOCK248 inserted with id: f5a1a49b-a310-4833-82b5-f2ce7124374b
+6056 INFO  cassdemo.backend.BackendSession: Locker LOCK249 inserted with id: 7a7a2c9e-96ab-4b52-bd70-dce00158444f
+6057 INFO  cassdemo.backend.BackendSession: Locker LOCK250 inserted with id: c08002e6-3e45-46c5-9f96-f213cb5b179f
+6058 INFO  cassdemo.backend.BackendSession: Locker LOCK251 inserted with id: bad2d5f5-7632-4880-a768-29ab83383130
+6059 INFO  cassdemo.backend.BackendSession: Locker LOCK252 inserted with id: 4051388a-7a3e-4965-8ca3-0b246cd877cd
+6060 INFO  cassdemo.backend.BackendSession: Locker LOCK253 inserted with id: 41ccd169-041d-4a3b-a4ee-3905928344a9
+6061 INFO  cassdemo.backend.BackendSession: Locker LOCK254 inserted with id: 0ad05b48-a9d2-41a5-917d-e493cc52d988
+6062 INFO  cassdemo.backend.BackendSession: Locker LOCK255 inserted with id: eba77056-fc13-4c43-b59a-fe70f68dd87e
+6064 INFO  cassdemo.backend.BackendSession: Locker LOCK256 inserted with id: cb23945b-1edd-4811-b438-42ad7fd7866a
+6065 INFO  cassdemo.backend.BackendSession: Locker LOCK257 inserted with id: 88adeed6-41c9-44b8-9cac-c8d9f94d0a58
+6066 INFO  cassdemo.backend.BackendSession: Locker LOCK258 inserted with id: dfee32cb-00ce-4cd8-92a0-d2fb3f7f0207
+6066 INFO  cassdemo.backend.BackendSession: Locker LOCK259 inserted with id: 9fa02271-f738-4151-8b6f-4a7467445cae
+6067 INFO  cassdemo.backend.BackendSession: Locker LOCK260 inserted with id: cf494032-2114-4a73-8767-6ffc8e50d13a
+6068 INFO  cassdemo.backend.BackendSession: Locker LOCK261 inserted with id: 5ac5643b-0189-478f-a9d3-4f496b6dc90e
+6069 INFO  cassdemo.backend.BackendSession: Locker LOCK262 inserted with id: b797d5ea-e2a4-4b81-9552-88df797cebb5
+6070 INFO  cassdemo.backend.BackendSession: Locker LOCK263 inserted with id: 9f584f7e-78c1-446d-a09c-ebcba9765f24
+6071 INFO  cassdemo.backend.BackendSession: Locker LOCK264 inserted with id: 5b4185ff-3bb6-4e23-aad1-5908add63d59
+6072 INFO  cassdemo.backend.BackendSession: Locker LOCK265 inserted with id: cef0774e-628f-4e11-906f-75d541e2d76b
+6073 INFO  cassdemo.backend.BackendSession: Locker LOCK266 inserted with id: 370cccb5-ef6d-4169-b580-43d6fb4ee080
+6074 INFO  cassdemo.backend.BackendSession: Locker LOCK267 inserted with id: 94c51eba-76be-45a0-9cee-70f032a25bf6
+6075 INFO  cassdemo.backend.BackendSession: Locker LOCK268 inserted with id: 4ebe6bf9-9eae-49f2-940b-bf3d67d343b2
+6076 INFO  cassdemo.backend.BackendSession: Locker LOCK269 inserted with id: 0351831d-454c-468e-8e88-bb9a2424e675
+6076 INFO  cassdemo.backend.BackendSession: Locker LOCK270 inserted with id: 2dde942f-a790-4acb-88c7-9200dafa6981
+6078 INFO  cassdemo.backend.BackendSession: Locker LOCK271 inserted with id: 7a0c74f4-23ab-43d1-9bb2-87dae1711df2
+6078 INFO  cassdemo.backend.BackendSession: Locker LOCK272 inserted with id: af62dc8b-d07c-407a-a79d-5a625bfc7172
+6079 INFO  cassdemo.backend.BackendSession: Locker LOCK273 inserted with id: cce0e850-cd54-40e4-bbeb-da73ee7ac14f
+6080 INFO  cassdemo.backend.BackendSession: Locker LOCK274 inserted with id: 8e0cd457-508e-4aa7-a548-90fea11d6f12
+6081 INFO  cassdemo.backend.BackendSession: Locker LOCK275 inserted with id: 5caf7add-319a-42f4-900d-be8b61113f09
+6082 INFO  cassdemo.backend.BackendSession: Locker LOCK276 inserted with id: b3adcb0e-6953-4b5e-bb9a-08219a2fd6fd
+6083 INFO  cassdemo.backend.BackendSession: Locker LOCK277 inserted with id: edfa5c71-ca0f-48e8-852c-55eea3b49f84
+6083 INFO  cassdemo.backend.BackendSession: Locker LOCK278 inserted with id: 9fa05e7a-f60f-4515-b643-d78008d549c8
+6085 INFO  cassdemo.backend.BackendSession: Locker LOCK279 inserted with id: d3b947b0-a3c7-4abb-8515-1ce70e9170be
+6086 INFO  cassdemo.backend.BackendSession: Locker LOCK280 inserted with id: 75fdd080-ced2-4eda-b858-7a6a133885a2
+6086 INFO  cassdemo.backend.BackendSession: Locker LOCK281 inserted with id: c3b35d01-c76f-4379-824b-a23f6cdf9f73
+6087 INFO  cassdemo.backend.BackendSession: Locker LOCK282 inserted with id: 817f4aed-d5b1-414c-aeaf-bde1bb5f3c28
+6088 INFO  cassdemo.backend.BackendSession: Locker LOCK283 inserted with id: 9c864d6d-d0b5-4209-bbdb-a889bfd40bb7
+6089 INFO  cassdemo.backend.BackendSession: Locker LOCK284 inserted with id: 7bfbbf41-ab36-49b6-a8ef-0dc45d1328af
+6090 INFO  cassdemo.backend.BackendSession: Locker LOCK285 inserted with id: a5c6c6dd-7692-49e5-8912-e8336c445c50
+6091 INFO  cassdemo.backend.BackendSession: Locker LOCK286 inserted with id: f42fd63b-4d75-42b7-b5e1-1ef879f5564f
+6091 INFO  cassdemo.backend.BackendSession: Locker LOCK287 inserted with id: a4d3dabd-3a7b-44b6-8ec8-018776e94d3f
+6092 INFO  cassdemo.backend.BackendSession: Locker LOCK288 inserted with id: ae509748-e103-48de-8659-bde05e25ec95
+6093 INFO  cassdemo.backend.BackendSession: Locker LOCK289 inserted with id: 14b16df5-1efd-491e-83c4-8d1e5e67f9b7
+6094 INFO  cassdemo.backend.BackendSession: Locker LOCK290 inserted with id: 51d72368-29ee-4725-b211-f5e87ea8f790
+6095 INFO  cassdemo.backend.BackendSession: Locker LOCK291 inserted with id: 6c4d2c89-21f2-433b-89f6-6d8ec70400bd
+6096 INFO  cassdemo.backend.BackendSession: Locker LOCK292 inserted with id: 190b8512-aae8-42cb-885b-340da9d05cdc
+6097 INFO  cassdemo.backend.BackendSession: Locker LOCK293 inserted with id: ce7b1664-1a8e-49d1-9f91-1163c7c29f00
+6097 INFO  cassdemo.backend.BackendSession: Locker LOCK294 inserted with id: 92e54f2c-f2b9-4db9-a894-eb6ce7bbc854
+6098 INFO  cassdemo.backend.BackendSession: Locker LOCK295 inserted with id: efff9544-68e7-4898-b802-318baf663dea
+6099 INFO  cassdemo.backend.BackendSession: Locker LOCK296 inserted with id: fedf3693-96e0-49bc-ae01-8a183bec5eb3
+6100 INFO  cassdemo.backend.BackendSession: Locker LOCK297 inserted with id: b48e5590-83de-4698-8d18-c88a125b9776
+6100 INFO  cassdemo.backend.BackendSession: Locker LOCK298 inserted with id: a0454ba0-ef7d-455e-98c8-23bf10c75692
+6101 INFO  cassdemo.backend.BackendSession: Locker LOCK299 inserted with id: 275b5d8e-7478-4c81-b58f-77dc44aa8d2c
+6102 INFO  cassdemo.backend.BackendSession: Locker LOCK300 inserted with id: dadd263c-0200-4dc5-9ae2-c193a40fb0e9
+6103 INFO  cassdemo.backend.BackendSession: Locker LOCK301 inserted with id: 0b472e31-e9e4-495a-8451-af75bd514e4c
+6104 INFO  cassdemo.backend.BackendSession: Locker LOCK302 inserted with id: cd62d5fb-6072-498c-aba3-7555952e60aa
+6105 INFO  cassdemo.backend.BackendSession: Locker LOCK303 inserted with id: b7b947b9-aba5-4145-a320-da2fa087b5b0
+6106 INFO  cassdemo.backend.BackendSession: Locker LOCK304 inserted with id: c1a36651-1ad2-4b05-8324-899241982861
+6106 INFO  cassdemo.backend.BackendSession: Locker LOCK305 inserted with id: 960f4d27-6ad4-4ce4-b416-1422d29407e9
+6107 INFO  cassdemo.backend.BackendSession: Locker LOCK306 inserted with id: 7e9ed09a-676b-4087-9965-8fe307f0065d
+6108 INFO  cassdemo.backend.BackendSession: Locker LOCK307 inserted with id: d2f90f6b-1d20-4384-a918-e6a3ad149dd6
+6108 INFO  cassdemo.backend.BackendSession: Locker LOCK308 inserted with id: e9cab2a0-8aed-452f-83d9-ae119f434764
+6109 INFO  cassdemo.backend.BackendSession: Locker LOCK309 inserted with id: 5547bbb3-dbed-41a5-ac41-43d4e44b92db
+6110 INFO  cassdemo.backend.BackendSession: Locker LOCK310 inserted with id: 83b8c347-4cf5-422e-951f-da75b390adb1
+6112 INFO  cassdemo.backend.BackendSession: Locker LOCK311 inserted with id: b6308569-9039-4868-9b38-1a0d88468991
+6113 INFO  cassdemo.backend.BackendSession: Locker LOCK312 inserted with id: 06c76649-3e16-45ec-b7f5-447b9d21029c
+6114 INFO  cassdemo.backend.BackendSession: Locker LOCK313 inserted with id: d7935eed-313c-45b7-8913-271cff4c0c8f
+6115 INFO  cassdemo.backend.BackendSession: Locker LOCK314 inserted with id: 224975dd-a161-44ac-87b3-2ab7407aef1c
+6116 INFO  cassdemo.backend.BackendSession: Locker LOCK315 inserted with id: 94f16e47-536d-49d3-aaa7-3f795eac01ba
+6117 INFO  cassdemo.backend.BackendSession: Locker LOCK316 inserted with id: 6bf70a90-291f-43c3-97c9-26333b0c7c69
+6118 INFO  cassdemo.backend.BackendSession: Locker LOCK317 inserted with id: d8386ce8-2614-4dcb-98eb-5fe5ae39d108
+6118 INFO  cassdemo.backend.BackendSession: Locker LOCK318 inserted with id: c4ee99e4-c333-45f6-80e7-938d26dc2ae2
+6119 INFO  cassdemo.backend.BackendSession: Locker LOCK319 inserted with id: d6b44a97-82e3-470b-8a0c-45dd9f6da8a4
+6120 INFO  cassdemo.backend.BackendSession: Locker LOCK320 inserted with id: 8d366aab-d1fe-4aa1-968b-2658ac707b48
+6121 INFO  cassdemo.backend.BackendSession: Locker LOCK321 inserted with id: 11b34a81-90c6-46f2-b9c6-919e2b53370a
+6122 INFO  cassdemo.backend.BackendSession: Locker LOCK322 inserted with id: 442105f3-9593-435b-9447-33c488a82e0b
+6123 INFO  cassdemo.backend.BackendSession: Locker LOCK323 inserted with id: 5c55852d-d43d-4248-866d-d8787e81404b
+6123 INFO  cassdemo.backend.BackendSession: Locker LOCK324 inserted with id: a93cd7ec-d7e5-4837-9785-143313102903
+6124 INFO  cassdemo.backend.BackendSession: Locker LOCK325 inserted with id: 7bc71b38-9833-41c9-8178-dac771c61b95
+6126 INFO  cassdemo.backend.BackendSession: Locker LOCK326 inserted with id: 88a16987-cb73-42da-bef5-92ba1d11cc3a
+6127 INFO  cassdemo.backend.BackendSession: Locker LOCK327 inserted with id: 1cc93a39-0136-4df3-b178-0fc661d88938
+6127 INFO  cassdemo.backend.BackendSession: Locker LOCK328 inserted with id: 65e6569b-49f9-4d38-9131-5c29b4ebedde
+6128 INFO  cassdemo.backend.BackendSession: Locker LOCK329 inserted with id: 0256b49b-afa9-48ec-83a7-e46defbb448e
+6129 INFO  cassdemo.backend.BackendSession: Locker LOCK330 inserted with id: 5691db58-60a0-462f-9407-1fe4f0ca4eff
+6130 INFO  cassdemo.backend.BackendSession: Locker LOCK331 inserted with id: a2f9f285-b08f-4889-95ea-ac6cbccab5c4
+6131 INFO  cassdemo.backend.BackendSession: Locker LOCK332 inserted with id: 73112169-3137-4f16-8a86-99e730301792
+6131 INFO  cassdemo.backend.BackendSession: Locker LOCK333 inserted with id: fda60c71-18ed-496e-895c-f3fb523551e7
+6132 INFO  cassdemo.backend.BackendSession: Locker LOCK334 inserted with id: 11c3a373-2a11-41ca-8d05-6e0e981cc0ea
+6133 INFO  cassdemo.backend.BackendSession: Locker LOCK335 inserted with id: dda35b85-b027-4402-9855-d0033532a1fa
+6134 INFO  cassdemo.backend.BackendSession: Locker LOCK336 inserted with id: ac9fb8a1-35e6-48e2-bc21-20cdad7e5f6e
+6135 INFO  cassdemo.backend.BackendSession: Locker LOCK337 inserted with id: 04b1a3fe-c14a-49ba-818c-474ed4bc1673
+6136 INFO  cassdemo.backend.BackendSession: Locker LOCK338 inserted with id: 242018e4-23cf-4606-b3e8-4412cd995ab7
+6137 INFO  cassdemo.backend.BackendSession: Locker LOCK339 inserted with id: 71b52f6d-a310-451b-898b-3c30d09080ea
+6138 INFO  cassdemo.backend.BackendSession: Locker LOCK340 inserted with id: ae5a6cac-78bc-4ed7-8055-746ac4f50ccd
+6138 INFO  cassdemo.backend.BackendSession: Locker LOCK341 inserted with id: 001f75cf-59c3-4888-b8d6-4c5ef31a201e
+6139 INFO  cassdemo.backend.BackendSession: Locker LOCK342 inserted with id: 7c77cda4-a330-474d-b679-8d1506b4a128
+6140 INFO  cassdemo.backend.BackendSession: Locker LOCK343 inserted with id: 68a8019b-821a-4ce7-9b1e-c37fb35230c0
+6141 INFO  cassdemo.backend.BackendSession: Locker LOCK344 inserted with id: 0c2c5de4-57bd-4413-8762-5d31e1fcbdab
+6142 INFO  cassdemo.backend.BackendSession: Locker LOCK345 inserted with id: 4454b85b-8c3f-4f5e-b76a-4086ad3b4f76
+6143 INFO  cassdemo.backend.BackendSession: Locker LOCK346 inserted with id: 6c0e6775-4fd3-4680-bd63-97d7a1435bba
+6144 INFO  cassdemo.backend.BackendSession: Locker LOCK347 inserted with id: 9706f416-72bc-418a-b4f3-5d04b593dc8e
+6145 INFO  cassdemo.backend.BackendSession: Locker LOCK348 inserted with id: 9f450588-8dea-4437-bea7-cac88937a8ad
+6146 INFO  cassdemo.backend.BackendSession: Locker LOCK349 inserted with id: 60acfc9e-45b7-436e-aee5-66e6bba1ad90
+6147 INFO  cassdemo.backend.BackendSession: Locker LOCK350 inserted with id: 41f64dc5-a867-464e-9571-df4ed4155ca0
+6148 INFO  cassdemo.backend.BackendSession: Locker LOCK351 inserted with id: 5bbecf98-4e7b-45c3-96ab-41c54fb73e6b
+6149 INFO  cassdemo.backend.BackendSession: Locker LOCK352 inserted with id: fcc3ee9b-85b2-4473-b077-282c5550ba1b
+6150 INFO  cassdemo.backend.BackendSession: Locker LOCK353 inserted with id: 6849a839-324c-4196-8898-6039dfbb0596
+6151 INFO  cassdemo.backend.BackendSession: Locker LOCK354 inserted with id: 7582cab3-f006-4442-9be4-ddbcaabbab8a
+6151 INFO  cassdemo.backend.BackendSession: Locker LOCK355 inserted with id: 7e0d2fef-cdad-4fad-8aab-5736c34104a0
+6152 INFO  cassdemo.backend.BackendSession: Locker LOCK356 inserted with id: a2d838b0-6231-43f4-ba4f-d0fb122d6035
+6153 INFO  cassdemo.backend.BackendSession: Locker LOCK357 inserted with id: ab5cd451-e5dc-4b85-a226-6739bd4c9f6e
+6154 INFO  cassdemo.backend.BackendSession: Locker LOCK358 inserted with id: 6390c242-2144-4ba3-95ed-8d7f31353542
+6156 INFO  cassdemo.backend.BackendSession: Locker LOCK359 inserted with id: d9d61844-39ca-40fc-8d07-5ac818c2a7f9
+6157 INFO  cassdemo.backend.BackendSession: Locker LOCK360 inserted with id: cc471827-68f6-434a-9689-205af8ab7f30
+6158 INFO  cassdemo.backend.BackendSession: Locker LOCK361 inserted with id: 217cfa92-b877-4fd3-86c6-d9ac60192495
+6158 INFO  cassdemo.backend.BackendSession: Locker LOCK362 inserted with id: c65a1f1f-8375-463b-93df-3a30f0c1f1b8
+6159 INFO  cassdemo.backend.BackendSession: Locker LOCK363 inserted with id: cdb993fe-b116-4ecb-b038-6b7aed9df88b
+6160 INFO  cassdemo.backend.BackendSession: Locker LOCK364 inserted with id: 658b890c-ab31-486a-ba8f-74c0052fa009
+6161 INFO  cassdemo.backend.BackendSession: Locker LOCK365 inserted with id: 0f0e15c6-25eb-4726-b9a6-aff616992cc6
+6162 INFO  cassdemo.backend.BackendSession: Locker LOCK366 inserted with id: 70e97952-03bc-4c71-9bbe-60613a74c572
+6163 INFO  cassdemo.backend.BackendSession: Locker LOCK367 inserted with id: c7118cc4-04c5-4003-ad04-edd859beaec1
+6164 INFO  cassdemo.backend.BackendSession: Locker LOCK368 inserted with id: 20eafd26-7b11-4945-b0f4-42bc9cb4bd02
+6165 INFO  cassdemo.backend.BackendSession: Locker LOCK369 inserted with id: c9fa1b6a-9328-4c3c-a554-59c2075c8014
+6166 INFO  cassdemo.backend.BackendSession: Locker LOCK370 inserted with id: 255d537a-da63-4c03-b2cf-bee2ba05fd5f
+6166 INFO  cassdemo.backend.BackendSession: Locker LOCK371 inserted with id: b581ddfa-253a-45b2-97bd-0702915e9a6d
+6168 INFO  cassdemo.backend.BackendSession: Locker LOCK372 inserted with id: db8ba678-9bfd-4ca8-9cf9-13f59463a753
+6168 INFO  cassdemo.backend.BackendSession: Locker LOCK373 inserted with id: 3909e26f-5b58-4600-aa3e-16e52b95cea6
+6169 INFO  cassdemo.backend.BackendSession: Locker LOCK374 inserted with id: 337e4ca3-cd9d-41f8-ac94-42dc3d24b3d5
+6170 INFO  cassdemo.backend.BackendSession: Locker LOCK375 inserted with id: e2494c93-5678-4c4f-bd43-7faea0aa57a2
+6171 INFO  cassdemo.backend.BackendSession: Locker LOCK376 inserted with id: 694d5ca4-f2dd-47ed-9678-c7a12778819b
+6172 INFO  cassdemo.backend.BackendSession: Locker LOCK377 inserted with id: 6e58709e-b0ee-4a2d-a657-cd1c6eb9b2c0
+6173 INFO  cassdemo.backend.BackendSession: Locker LOCK378 inserted with id: d7c52544-9049-4779-9059-9d3b54855e99
+6173 INFO  cassdemo.backend.BackendSession: Locker LOCK379 inserted with id: f97aa4cf-530f-4b6e-a91c-d9e08eeb04d1
+6174 INFO  cassdemo.backend.BackendSession: Locker LOCK380 inserted with id: 7a4dea98-694f-49f3-99fb-8b2756afdca6
+6175 INFO  cassdemo.backend.BackendSession: Locker LOCK381 inserted with id: 189b8324-d96b-4d7c-8c01-f4d285cb7b1b
+6176 INFO  cassdemo.backend.BackendSession: Locker LOCK382 inserted with id: 482e63bf-be67-4019-a00d-0e09d689f6a6
+6177 INFO  cassdemo.backend.BackendSession: Locker LOCK383 inserted with id: 512d2740-c33a-4c5b-ac6c-e9344308721e
+6178 INFO  cassdemo.backend.BackendSession: Locker LOCK384 inserted with id: 4225e564-ed35-47c6-b232-ac4bd14df509
+6179 INFO  cassdemo.backend.BackendSession: Locker LOCK385 inserted with id: 9f052ec5-49dc-45ad-bfbf-b7dd71d9fad7
+6180 INFO  cassdemo.backend.BackendSession: Locker LOCK386 inserted with id: 46f89fc9-cea7-418f-b439-759548fd66ed
+6181 INFO  cassdemo.backend.BackendSession: Locker LOCK387 inserted with id: 675c5d24-f5b0-4ba3-87db-59053e56abfd
+6182 INFO  cassdemo.backend.BackendSession: Locker LOCK388 inserted with id: 6b33a1aa-a1a3-49dc-8b95-def835a9c1b6
+6182 INFO  cassdemo.backend.BackendSession: Locker LOCK389 inserted with id: f0581677-bd04-4456-9ce3-fc8bbeff9252
+6183 INFO  cassdemo.backend.BackendSession: Locker LOCK390 inserted with id: 76095682-9bbf-4619-993d-eb925fcc0d1a
+6184 INFO  cassdemo.backend.BackendSession: Locker LOCK391 inserted with id: 6cd68440-a6dc-436c-8fd3-a068614994c7
+6185 INFO  cassdemo.backend.BackendSession: Locker LOCK392 inserted with id: 648902e4-8cf6-4113-b66e-eff540adb19c
+6186 INFO  cassdemo.backend.BackendSession: Locker LOCK393 inserted with id: b89cb954-3454-4be2-84ae-94be56735e65
+6187 INFO  cassdemo.backend.BackendSession: Locker LOCK394 inserted with id: 7d0a5f83-47f2-43d3-9fa8-6492e6395263
+6187 INFO  cassdemo.backend.BackendSession: Locker LOCK395 inserted with id: 0dbe8385-653b-444c-8756-b312fe32524c
+6188 INFO  cassdemo.backend.BackendSession: Locker LOCK396 inserted with id: 6854d6a5-b9d2-4dfb-9fa6-c4a46ebd52e4
+6189 INFO  cassdemo.backend.BackendSession: Locker LOCK397 inserted with id: c6821d65-95c3-4f28-bb7a-368a59b90b6e
+6190 INFO  cassdemo.backend.BackendSession: Locker LOCK398 inserted with id: 3c6b59ea-f47d-4736-b536-28fcc0c2d8c4
+6191 INFO  cassdemo.backend.BackendSession: Locker LOCK399 inserted with id: dabd17fc-ee4b-4577-bbc9-e27606d57cd2
+6191 INFO  cassdemo.backend.BackendSession: Locker LOCK400 inserted with id: 6f60adf8-fc51-4e2d-bd60-2047f4f6493c
+6192 INFO  cassdemo.backend.BackendSession: Locker LOCK401 inserted with id: 657fa20e-214c-49af-8276-59eb8d841ea6
+6193 INFO  cassdemo.backend.BackendSession: Locker LOCK402 inserted with id: ced344f7-34b7-43e4-a635-4b12969b30d7
+6194 INFO  cassdemo.backend.BackendSession: Locker LOCK403 inserted with id: 989c606c-3fc2-4902-bd0a-1aac22aa94c1
+6195 INFO  cassdemo.backend.BackendSession: Locker LOCK404 inserted with id: 056296da-ab39-405a-8985-4feeed8308d1
+6196 INFO  cassdemo.backend.BackendSession: Locker LOCK405 inserted with id: 18f21301-17f1-4894-988c-c9c1d3bdc6a9
+6197 INFO  cassdemo.backend.BackendSession: Locker LOCK406 inserted with id: aacce329-2bbb-485c-b156-dcd372669095
+6198 INFO  cassdemo.backend.BackendSession: Locker LOCK407 inserted with id: 0a0f25d1-cb82-40a5-902f-a58bc7cfebb4
+6198 INFO  cassdemo.backend.BackendSession: Locker LOCK408 inserted with id: 5f5d2f15-0cbe-4670-a15c-37847c9ae271
+6199 INFO  cassdemo.backend.BackendSession: Locker LOCK409 inserted with id: d9f3a2b8-8505-4aef-8fff-d5d77f32c185
+6200 INFO  cassdemo.backend.BackendSession: Locker LOCK410 inserted with id: 35533e4d-b334-4327-8fc0-7e03dc099281
+6201 INFO  cassdemo.backend.BackendSession: Locker LOCK411 inserted with id: be91d0b0-2320-4c48-a089-bd40c6250efb
+6202 INFO  cassdemo.backend.BackendSession: Locker LOCK412 inserted with id: cd8e8286-28c8-46e2-88d4-7af9fcce9037
+6202 INFO  cassdemo.backend.BackendSession: Locker LOCK413 inserted with id: db52e576-7234-4f00-a908-3ec2126a9201
+6203 INFO  cassdemo.backend.BackendSession: Locker LOCK414 inserted with id: 65cb38c9-b2f5-4c76-a5a4-e4b90607ea73
+6204 INFO  cassdemo.backend.BackendSession: Locker LOCK415 inserted with id: 93c7efe1-96a8-4d59-bdd5-d3d8f41234fb
+6205 INFO  cassdemo.backend.BackendSession: Locker LOCK416 inserted with id: 5149f32d-0d88-4113-9544-7e1aa7cfb741
+6206 INFO  cassdemo.backend.BackendSession: Locker LOCK417 inserted with id: 24230013-7025-429e-a363-36bd2cc11a26
+6207 INFO  cassdemo.backend.BackendSession: Locker LOCK418 inserted with id: 025278c1-b242-47ee-87bf-93ba2a8e61f8
+6208 INFO  cassdemo.backend.BackendSession: Locker LOCK419 inserted with id: 9b2650e7-efe2-4e00-b818-1d461b1b169d
+6208 INFO  cassdemo.backend.BackendSession: Locker LOCK420 inserted with id: df228869-fc34-4db5-bfb2-79816ab7f43a
+6209 INFO  cassdemo.backend.BackendSession: Locker LOCK421 inserted with id: 29c2f829-34cd-44dc-95fa-c202d3071c27
+6209 INFO  cassdemo.backend.BackendSession: Locker LOCK422 inserted with id: dbd7880f-b619-43ed-a7ed-5ba90439bd43
+6210 INFO  cassdemo.backend.BackendSession: Locker LOCK423 inserted with id: bba4eae2-d3af-491c-aa5d-d70e8a699a19
+6211 INFO  cassdemo.backend.BackendSession: Locker LOCK424 inserted with id: d23a06d0-4bdd-470c-964b-a46c6b0e86ac
+6212 INFO  cassdemo.backend.BackendSession: Locker LOCK425 inserted with id: 15a6c639-d543-4dbd-b54d-1595c9bc9db0
+6213 INFO  cassdemo.backend.BackendSession: Locker LOCK426 inserted with id: 011fe721-34c5-4e80-b393-b82b7f9ddf71
+6214 INFO  cassdemo.backend.BackendSession: Locker LOCK427 inserted with id: 1396c86b-f656-4cba-a40d-918a8f54f36a
+6215 INFO  cassdemo.backend.BackendSession: Locker LOCK428 inserted with id: 6bf82660-4479-42d5-a38d-b10a54200ed3
+6215 INFO  cassdemo.backend.BackendSession: Locker LOCK429 inserted with id: e246be06-5584-4148-a44f-10d517589693
+6216 INFO  cassdemo.backend.BackendSession: Locker LOCK430 inserted with id: e6756c23-8c0c-4ecd-a9ea-a1f30f59509e
+6217 INFO  cassdemo.backend.BackendSession: Locker LOCK431 inserted with id: 2e2ef8ff-4ae9-4c91-9318-c334ad33c633
+6217 INFO  cassdemo.backend.BackendSession: Locker LOCK432 inserted with id: 14509231-ae91-4112-8265-cb0d0d2325f8
+6219 INFO  cassdemo.backend.BackendSession: Locker LOCK433 inserted with id: 506191c7-81e7-4102-92c7-1e5963f1a2b4
+6220 INFO  cassdemo.backend.BackendSession: Locker LOCK434 inserted with id: 371a4aba-8283-4351-956a-0d0f3d01eacc
+6221 INFO  cassdemo.backend.BackendSession: Locker LOCK435 inserted with id: c6f16d39-d4ef-4456-bf14-1f0d9ea56641
+6222 INFO  cassdemo.backend.BackendSession: Locker LOCK436 inserted with id: dae0cd87-ec0e-4fde-9c46-84d093f613d9
+6222 INFO  cassdemo.backend.BackendSession: Locker LOCK437 inserted with id: 001cf3c5-0642-4a75-b98c-71d6a5c94a2f
+6223 INFO  cassdemo.backend.BackendSession: Locker LOCK438 inserted with id: 65c111dd-3f5f-49a8-899a-b331f8f58033
+6224 INFO  cassdemo.backend.BackendSession: Locker LOCK439 inserted with id: 94413ce6-420a-468a-acc0-1905704b1ec9
+6225 INFO  cassdemo.backend.BackendSession: Locker LOCK440 inserted with id: 79a0e2d4-be16-414e-ba8c-f8fefa12882b
+6226 INFO  cassdemo.backend.BackendSession: Locker LOCK441 inserted with id: e49328ce-3c25-46a8-9953-f0045d96e9d0
+6227 INFO  cassdemo.backend.BackendSession: Locker LOCK442 inserted with id: 7bd370b0-2162-4b18-997b-537769475462
+6228 INFO  cassdemo.backend.BackendSession: Locker LOCK443 inserted with id: 0da0d0ba-dc3a-40a5-b68e-8e5bba91523b
+6228 INFO  cassdemo.backend.BackendSession: Locker LOCK444 inserted with id: 29c09f81-a9ac-4a05-9ca5-4d1f0ab8abcc
+6229 INFO  cassdemo.backend.BackendSession: Locker LOCK445 inserted with id: 0352a735-4946-4aa1-8508-5ae560a04d40
+6230 INFO  cassdemo.backend.BackendSession: Locker LOCK446 inserted with id: 61c43b71-f4f4-435d-809e-8fabefb59950
+6231 INFO  cassdemo.backend.BackendSession: Locker LOCK447 inserted with id: 43b692d4-e43e-45fa-a483-087f2ddaffa2
+6231 INFO  cassdemo.backend.BackendSession: Locker LOCK448 inserted with id: e78e707e-4fc9-49cf-afb6-aeab3087bf0e
+6232 INFO  cassdemo.backend.BackendSession: Locker LOCK449 inserted with id: 43756444-494f-4fee-aa0c-481300658702
+6233 INFO  cassdemo.backend.BackendSession: Locker LOCK450 inserted with id: 446cc509-a2d8-44eb-9fab-e14c6faa02a6
+6234 INFO  cassdemo.backend.BackendSession: Locker LOCK451 inserted with id: c800a6a6-2950-4b9f-be95-f62b31010d76
+6234 INFO  cassdemo.backend.BackendSession: Locker LOCK452 inserted with id: e957bdc8-e2f6-4648-8812-cb50639b1e9a
+6235 INFO  cassdemo.backend.BackendSession: Locker LOCK453 inserted with id: 8c8c247f-0289-4c4c-96b1-a524bcad0b92
+6236 INFO  cassdemo.backend.BackendSession: Locker LOCK454 inserted with id: eac48707-9651-449b-a4d7-ffd5c0c73aef
+6237 INFO  cassdemo.backend.BackendSession: Locker LOCK455 inserted with id: f3408843-86db-4617-bfd6-a574b215e504
+6238 INFO  cassdemo.backend.BackendSession: Locker LOCK456 inserted with id: 264b33d5-67e6-4e66-a684-a96c586df73a
+6239 INFO  cassdemo.backend.BackendSession: Locker LOCK457 inserted with id: ac3ef220-96e3-4aa2-9a8a-d7b3f003fec8
+6239 INFO  cassdemo.backend.BackendSession: Locker LOCK458 inserted with id: ebd46da9-855e-48f9-b0e9-8e87f8a84258
+6240 INFO  cassdemo.backend.BackendSession: Locker LOCK459 inserted with id: 6763b60c-1788-4d42-aa03-9157a7320981
+6241 INFO  cassdemo.backend.BackendSession: Locker LOCK460 inserted with id: 259c3264-88cf-41fb-9f87-1e4dc89c3746
+6242 INFO  cassdemo.backend.BackendSession: Locker LOCK461 inserted with id: 9a586d46-9f86-48a3-8220-3e2d9dc95ff5
+6242 INFO  cassdemo.backend.BackendSession: Locker LOCK462 inserted with id: 4f4b3034-a9b2-4213-924f-d033c603918f
+6243 INFO  cassdemo.backend.BackendSession: Locker LOCK463 inserted with id: 5aceb348-e856-403a-86b7-bdd6a1f20663
+6244 INFO  cassdemo.backend.BackendSession: Locker LOCK464 inserted with id: 158d940b-13af-497e-8552-a76afdc6f7c3
+6245 INFO  cassdemo.backend.BackendSession: Locker LOCK465 inserted with id: bf401364-cd8c-49bf-afa0-2ead1274853c
+6246 INFO  cassdemo.backend.BackendSession: Locker LOCK466 inserted with id: 4416c6b5-3cd5-4c89-ab4e-b1a36eb3526c
+6246 INFO  cassdemo.backend.BackendSession: Locker LOCK467 inserted with id: eab5fe8c-1270-456b-b0f6-e5415b96ce3a
+6248 INFO  cassdemo.backend.BackendSession: Locker LOCK468 inserted with id: c4329d3c-cd9a-4226-8e33-614fb47d443e
+6248 INFO  cassdemo.backend.BackendSession: Locker LOCK469 inserted with id: ffed3a42-052d-448f-8aef-6fcfd073b479
+6249 INFO  cassdemo.backend.BackendSession: Locker LOCK470 inserted with id: cd3993ca-333c-47b9-924c-78666e624d34
+6250 INFO  cassdemo.backend.BackendSession: Locker LOCK471 inserted with id: 75703200-833d-4a89-ba3f-329b8ba601d5
+6251 INFO  cassdemo.backend.BackendSession: Locker LOCK472 inserted with id: db2ce6ad-e1bc-408f-858a-d3d0403fa875
+6252 INFO  cassdemo.backend.BackendSession: Locker LOCK473 inserted with id: 4302aac6-c800-4905-a2e1-f050cb2e6c3c
+6252 INFO  cassdemo.backend.BackendSession: Locker LOCK474 inserted with id: 58c73ef3-842b-44f3-ac89-fb785237fd07
+6253 INFO  cassdemo.backend.BackendSession: Locker LOCK475 inserted with id: 9034b21f-cdbc-4dbd-9f36-887535e83441
+6254 INFO  cassdemo.backend.BackendSession: Locker LOCK476 inserted with id: dbcda075-ba02-480f-84c8-c31b382f5d74
+6255 INFO  cassdemo.backend.BackendSession: Locker LOCK477 inserted with id: 8072f1aa-1c22-4d29-b3cc-915cbbb2c92d
+6255 INFO  cassdemo.backend.BackendSession: Locker LOCK478 inserted with id: 8c003d4d-c7ab-4246-86ee-512ad1e31240
+6256 INFO  cassdemo.backend.BackendSession: Locker LOCK479 inserted with id: 0e044ef6-ff62-4872-b06b-686face7c613
+6257 INFO  cassdemo.backend.BackendSession: Locker LOCK480 inserted with id: da53cd9b-5e40-4f64-8acf-0b9105a9dbe0
+6258 INFO  cassdemo.backend.BackendSession: Locker LOCK481 inserted with id: 146c819a-5081-477e-972e-251b5def8849
+6259 INFO  cassdemo.backend.BackendSession: Locker LOCK482 inserted with id: 67a96b37-6380-4c58-8e40-f2e17445a8cb
+6259 INFO  cassdemo.backend.BackendSession: Locker LOCK483 inserted with id: 07e1bb8b-d26d-4336-bf1a-9fe6dedf4617
+6260 INFO  cassdemo.backend.BackendSession: Locker LOCK484 inserted with id: e2c1ab00-0636-4c4e-ad6d-90b4d53c1a59
+6260 INFO  cassdemo.backend.BackendSession: Locker LOCK485 inserted with id: 6ab008cb-2fda-4f6a-a6f0-94cf51e64709
+6262 INFO  cassdemo.backend.BackendSession: Locker LOCK486 inserted with id: c87b6228-6a63-4248-8cce-f69737b8ffe4
+6263 INFO  cassdemo.backend.BackendSession: Locker LOCK487 inserted with id: b983f2a2-7aa2-4261-acc7-58f27ff60607
+6264 INFO  cassdemo.backend.BackendSession: Locker LOCK488 inserted with id: d4867f4c-a489-45d9-9d73-0b79d966592d
+6265 INFO  cassdemo.backend.BackendSession: Locker LOCK489 inserted with id: d0584820-0468-42f1-aacd-f2abe2f1ddfa
+6266 INFO  cassdemo.backend.BackendSession: Locker LOCK490 inserted with id: 2ddc053f-a92b-493c-ba14-1a5e8a747765
+6266 INFO  cassdemo.backend.BackendSession: Locker LOCK491 inserted with id: 0588a084-c81f-4566-81ab-1390ea608b90
+6267 INFO  cassdemo.backend.BackendSession: Locker LOCK492 inserted with id: 7863085f-c53d-470a-8b85-bb49f4037c8f
+6268 INFO  cassdemo.backend.BackendSession: Locker LOCK493 inserted with id: c3877b47-564c-476a-8191-9dd6d8d884b5
+6269 INFO  cassdemo.backend.BackendSession: Locker LOCK494 inserted with id: 42e321cc-482c-4756-9a4f-58e37dd10c72
+6270 INFO  cassdemo.backend.BackendSession: Locker LOCK495 inserted with id: 72e92e6d-f6f0-443a-839d-472637592c8e
+6270 INFO  cassdemo.backend.BackendSession: Locker LOCK496 inserted with id: 85c0b709-9cd4-49ec-bd6b-96753ad15a50
+6271 INFO  cassdemo.backend.BackendSession: Locker LOCK497 inserted with id: c363326f-5ead-4193-b0d3-83018e9eecff
+6272 INFO  cassdemo.backend.BackendSession: Locker LOCK498 inserted with id: a7e8e91f-42b9-4cdb-9423-b6f71aa1dd25
+6273 INFO  cassdemo.backend.BackendSession: Locker LOCK499 inserted with id: 1a019630-d58f-4712-85c5-b2f545f967cc
+6274 INFO  cassdemo.backend.BackendSession: Locker LOCK500 inserted with id: f895e013-7232-4f93-83e8-8e31f5bd55c2
+6277 INFO  cassdemo.backend.BackendSession: Shipment SHIP1 inserted with id: 6556ec34-d7e5-4c7d-8ba0-49b0d357cd3asize: 3
+6278 INFO  cassdemo.backend.BackendSession: Shipment SHIP2 inserted with id: 28452bde-33ea-4bb7-9d7e-73a2e6d4c67csize: 1
+6278 INFO  cassdemo.backend.BackendSession: Shipment SHIP3 inserted with id: 338bdb6d-139f-45f0-95fc-39f74f552359size: 3
+6279 INFO  cassdemo.backend.BackendSession: Shipment SHIP4 inserted with id: a326685e-2002-4f69-b50d-0b332bcfde08size: 3
+6280 INFO  cassdemo.backend.BackendSession: Shipment SHIP5 inserted with id: a508f7e5-aba4-4f64-8c3c-dd6d6d9a0495size: 2
+6281 INFO  cassdemo.backend.BackendSession: Shipment SHIP6 inserted with id: 28f963c6-2ae6-4781-88d7-c835fbd21642size: 3
+6281 INFO  cassdemo.backend.BackendSession: Shipment SHIP7 inserted with id: 90731517-89df-4f32-a0d1-bbef004f290dsize: 3
+6282 INFO  cassdemo.backend.BackendSession: Shipment SHIP8 inserted with id: 2ac06253-b4a4-4775-b5a4-99c2f93087a2size: 2
+6283 INFO  cassdemo.backend.BackendSession: Shipment SHIP9 inserted with id: 4331af8e-3bcc-4aa1-ae19-d74fd5a47516size: 1
+6284 INFO  cassdemo.backend.BackendSession: Shipment SHIP10 inserted with id: 9abc1cac-40a9-442d-aae2-577b85a662a2size: 1
+6285 INFO  cassdemo.backend.BackendSession: Shipment SHIP11 inserted with id: 6aab2df7-b02d-4b67-b1b3-8babc7049de1size: 3
+6285 INFO  cassdemo.backend.BackendSession: Shipment SHIP12 inserted with id: 7fbf6aa1-7061-4209-9399-20e341c3ffa5size: 3
+6286 INFO  cassdemo.backend.BackendSession: Shipment SHIP13 inserted with id: b568e1c3-d6a0-42a4-9142-14da8a464e92size: 1
+6287 INFO  cassdemo.backend.BackendSession: Shipment SHIP14 inserted with id: 58343dd3-95a2-43fe-aecc-2589fd3c0656size: 1
+6288 INFO  cassdemo.backend.BackendSession: Shipment SHIP15 inserted with id: f95608a9-b722-45b8-90a2-cbf828912050size: 2
+6288 INFO  cassdemo.backend.BackendSession: Shipment SHIP16 inserted with id: b6855b33-7ced-4fef-81ac-8ccc2a6f4335size: 1
+6289 INFO  cassdemo.backend.BackendSession: Shipment SHIP17 inserted with id: ee95fefd-6bc7-4ef6-a6ef-81683a54895dsize: 3
+6290 INFO  cassdemo.backend.BackendSession: Shipment SHIP18 inserted with id: c883043a-f77c-4352-a049-7d9e7019caa1size: 3
+6290 INFO  cassdemo.backend.BackendSession: Shipment SHIP19 inserted with id: 5d0c7052-0e01-4640-b3f7-07931b54b2d3size: 1
+6292 INFO  cassdemo.backend.BackendSession: Shipment SHIP20 inserted with id: ce7c207a-0a63-435e-a8d5-9043ba48f6edsize: 2
+6292 INFO  cassdemo.backend.BackendSession: Shipment SHIP21 inserted with id: 287d2684-fc81-46ee-9132-e7077f34dca2size: 3
+6293 INFO  cassdemo.backend.BackendSession: Shipment SHIP22 inserted with id: 38f010c7-905d-4da4-ab39-ba9467daad9dsize: 2
+6294 INFO  cassdemo.backend.BackendSession: Shipment SHIP23 inserted with id: 1ca341d7-dd78-43ac-8751-388e0816398csize: 3
+6295 INFO  cassdemo.backend.BackendSession: Shipment SHIP24 inserted with id: ccb2e8fc-2978-4288-b29e-0ca6674cfabcsize: 1
+6295 INFO  cassdemo.backend.BackendSession: Shipment SHIP25 inserted with id: 0ed70105-5f64-4136-a6e4-7d9c0972ea83size: 3
+6296 INFO  cassdemo.backend.BackendSession: Shipment SHIP26 inserted with id: 0c611a5a-b263-48b9-a469-6db25ade60f0size: 3
+6297 INFO  cassdemo.backend.BackendSession: Shipment SHIP27 inserted with id: 30721581-02c8-4c41-8d21-c6b062eed096size: 3
+6298 INFO  cassdemo.backend.BackendSession: Shipment SHIP28 inserted with id: f331a086-48a1-419f-80d2-2c34fe42b542size: 1
+6299 INFO  cassdemo.backend.BackendSession: Shipment SHIP29 inserted with id: 3630641c-1d73-4c7d-9fd1-f2f38645767esize: 1
+6299 INFO  cassdemo.backend.BackendSession: Shipment SHIP30 inserted with id: f45c151e-7318-4fad-a1f5-785ecec18d08size: 2
+6300 INFO  cassdemo.backend.BackendSession: Shipment SHIP31 inserted with id: 8355b951-7e03-49eb-9bdd-9303f41139ddsize: 3
+6301 INFO  cassdemo.backend.BackendSession: Shipment SHIP32 inserted with id: 6b376e9e-7db9-4742-b85d-9d8b4204f122size: 2
+6302 INFO  cassdemo.backend.BackendSession: Shipment SHIP33 inserted with id: e10f81d1-d2b3-4251-8f82-c7e017ef148bsize: 1
+6303 INFO  cassdemo.backend.BackendSession: Shipment SHIP34 inserted with id: 5b62ffcf-2e1c-4616-b119-1c635b10883dsize: 1
+6304 INFO  cassdemo.backend.BackendSession: Shipment SHIP35 inserted with id: 44ce908c-cd02-49c5-b099-000323245bc9size: 1
+6304 INFO  cassdemo.backend.BackendSession: Shipment SHIP36 inserted with id: 50d9c70e-b6b1-4445-86ab-fdc236814002size: 2
+6305 INFO  cassdemo.backend.BackendSession: Shipment SHIP37 inserted with id: f34349f8-c98f-42c2-a023-e1f1798e20e3size: 1
+6306 INFO  cassdemo.backend.BackendSession: Shipment SHIP38 inserted with id: 3461892d-b615-4405-8575-137df586bcd7size: 2
+6307 INFO  cassdemo.backend.BackendSession: Shipment SHIP39 inserted with id: 30ce99c4-a5f1-48e7-b305-9ba463329998size: 1
+6308 INFO  cassdemo.backend.BackendSession: Shipment SHIP40 inserted with id: 36c79e19-1dcb-4ecf-adf2-b32c280baa6esize: 3
+6309 INFO  cassdemo.backend.BackendSession: Shipment SHIP41 inserted with id: bcb150d1-4d13-45ff-8427-62b6e10c8c0bsize: 2
+6309 INFO  cassdemo.backend.BackendSession: Shipment SHIP42 inserted with id: 2853926b-2a8d-4c05-a781-17794dac832csize: 3
+6310 INFO  cassdemo.backend.BackendSession: Shipment SHIP43 inserted with id: b06d2301-b9e6-4f73-a89c-099c0b25b5e1size: 1
+6311 INFO  cassdemo.backend.BackendSession: Shipment SHIP44 inserted with id: c42f7046-22a0-4ce5-938b-3b7bdde87da6size: 2
+6311 INFO  cassdemo.backend.BackendSession: Shipment SHIP45 inserted with id: 597aa5c6-b288-4743-b023-ebfd487eae7bsize: 1
+6312 INFO  cassdemo.backend.BackendSession: Shipment SHIP46 inserted with id: c2978a6f-4f40-4fb1-a75e-554f12c65bf6size: 1
+6313 INFO  cassdemo.backend.BackendSession: Shipment SHIP47 inserted with id: 868a130b-a55c-4133-8e8c-1b5644151f29size: 2
+6314 INFO  cassdemo.backend.BackendSession: Shipment SHIP48 inserted with id: 7ebf316e-3a79-40d2-af65-4824e3f90d76size: 2
+6314 INFO  cassdemo.backend.BackendSession: Shipment SHIP49 inserted with id: 82c7e4eb-b6f7-4a0f-a62f-f9a7f68590ebsize: 2
+6315 INFO  cassdemo.backend.BackendSession: Shipment SHIP50 inserted with id: 74ff2f58-36a3-4bd9-9cd8-dadf8a4b429bsize: 1
+6447 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c4ee99e4-c333-45f6-80e7-938d26dc2ae2
+6448 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1ad66263-36b8-4111-9a1a-6695e980ef78
+6449 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a139bed3-e126-4e97-a4d7-5c4c89e8f4f1
+6450 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8e0cd457-508e-4aa7-a548-90fea11d6f12
+6451 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4302aac6-c800-4905-a2e1-f050cb2e6c3c
+6451 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e7d3bff0-3f1f-430b-a3f6-eacfeddbde9e
+6452 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e78e707e-4fc9-49cf-afb6-aeab3087bf0e
+6454 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 223d45e8-49f1-4f5a-b6f6-f3c06f31bd03
+6455 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c4b10a24-3c12-4ac1-b014-7eae2f6337f0
+6456 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a63389bd-872e-41b6-9988-13252017f869
+6456 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 68a8019b-821a-4ce7-9b1e-c37fb35230c0
+6457 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a1737301-b0e4-4016-b5ef-c84b35497135
+6458 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 648902e4-8cf6-4113-b66e-eff540adb19c
+6459 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker fe054cfd-8d91-49e6-a63d-a1d5495125aa
+6460 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ffed3a42-052d-448f-8aef-6fcfd073b479
+6461 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 75fdd080-ced2-4eda-b858-7a6a133885a2
+6462 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8a04192f-8854-4e33-a874-c95b24df735b
+6463 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8c8c247f-0289-4c4c-96b1-a524bcad0b92
+6464 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3bcaa448-4b95-450d-8840-afe535f5275a
+6465 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 98947a3d-25a3-4cb5-9f52-0727319f35d6
+6466 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 43756444-494f-4fee-aa0c-481300658702
+6467 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6e58709e-b0ee-4a2d-a657-cd1c6eb9b2c0
+6468 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dabd17fc-ee4b-4577-bbc9-e27606d57cd2
+6469 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 24230013-7025-429e-a363-36bd2cc11a26
+6471 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c6821d65-95c3-4f28-bb7a-368a59b90b6e
+6472 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e316bda6-bde5-4d7d-8346-92f7a0f1857a
+6473 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0fa61f85-32cd-46a1-b34b-985beb5aac94
+6474 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker bd9c3bb1-9ffc-4428-b8b6-d7fea4ed2d65
+6475 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 011fe721-34c5-4e80-b393-b82b7f9ddf71
+6476 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7a0c74f4-23ab-43d1-9bb2-87dae1711df2
+6477 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e7806ff1-816a-4375-ab6f-b553583cdbaa
+6478 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker df228869-fc34-4db5-bfb2-79816ab7f43a
+6479 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5641f690-09db-4c52-a7a9-9c27130fb1ca
+6480 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 20e25811-288d-48b6-bb96-1652cf106bb1
+6481 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f97aa4cf-530f-4b6e-a91c-d9e08eeb04d1
+6482 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ce8f96e1-89ce-4316-8fb9-c40fd724f917
+6483 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 91a93b5d-3b4e-4bee-ae41-9338f18dd4a9
+6484 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 15bdd9a2-cbbc-4826-89f0-2aa4abb8260b
+6485 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9034b21f-cdbc-4dbd-9f36-887535e83441
+6486 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker edcac24e-bbd3-4f90-98fa-a156a92c3d7a
+6487 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4454b85b-8c3f-4f5e-b76a-4086ad3b4f76
+6488 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9ccab708-4629-4b6e-b9e6-d5d17cc5c3d5
+6489 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 54549c34-1f44-4837-8fc3-5f398ef463b4
+6490 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b53d2a30-1005-4b20-bd91-250313cac23d
+6491 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9fa02271-f738-4151-8b6f-4a7467445cae
+6492 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7bd370b0-2162-4b18-997b-537769475462
+6493 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0782b1d4-cd69-4903-805d-9ce2881ce754
+6493 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 39118c39-6250-470e-b639-f9753b09645f
+6494 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1f18966e-6336-4b14-9a6a-72f656f11af6
+6495 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 41ccd169-041d-4a3b-a4ee-3905928344a9
+6496 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 108a1eac-ecb1-4ef8-bc41-446720e5c50f
+6497 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e9e03994-e41b-4c2b-a302-92b83a57cb5a
+6499 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e6756c23-8c0c-4ecd-a9ea-a1f30f59509e
+6499 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a0daaa20-260f-42ce-89a4-3022c3eaee0e
+6500 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ff7f49ca-f95b-4640-bcaf-0587d1a15088
+6501 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 60acfc9e-45b7-436e-aee5-66e6bba1ad90
+6502 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7c77cda4-a330-474d-b679-8d1506b4a128
+6503 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 204a10ab-c315-4e65-b22c-a349b1087284
+6504 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a661ba73-92b9-4708-9dfe-07fd92e75b72
+6505 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5691db58-60a0-462f-9407-1fe4f0ca4eff
+6506 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d7f72d7e-4276-4b1e-854f-af6fe387bb60
+6507 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 512d2740-c33a-4c5b-ac6c-e9344308721e
+6508 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2fedd270-3b24-42d7-b887-a62e57dcd19b
+6508 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0f0e15c6-25eb-4726-b9a6-aff616992cc6
+6509 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cce0e850-cd54-40e4-bbeb-da73ee7ac14f
+6510 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4416c6b5-3cd5-4c89-ab4e-b1a36eb3526c
+6511 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ef709433-b80b-4848-b0fd-84f7bb2fbb16
+6512 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 89fbac11-9020-4e41-be0c-08c4b2d7a62a
+6512 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c27b0e2e-dd2b-4d20-b7a3-3f1a73970e94
+6513 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5ac5643b-0189-478f-a9d3-4f496b6dc90e
+6514 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c9a025eb-2784-4273-abba-cad1ddd31b70
+6515 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 94f16e47-536d-49d3-aaa7-3f795eac01ba
+6516 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1cb04bab-787c-47d1-9331-9e93adb169f4
+6517 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6854d6a5-b9d2-4dfb-9fa6-c4a46ebd52e4
+6518 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0dbe8385-653b-444c-8756-b312fe32524c
+6519 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker db150104-8f86-4349-953e-a0ec392c3bbc
+6520 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5c55852d-d43d-4248-866d-d8787e81404b
+6521 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 44fee013-a70b-4719-93e3-64d11ca549ef
+6522 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f2e6242d-e79c-4e3a-b982-fe2d2d8410d8
+6522 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7e0d2fef-cdad-4fad-8aab-5736c34104a0
+6523 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e2d3db2a-ebd6-4640-bcc1-e1a7094c001f
+6524 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 48289f1c-7b95-47e5-9662-5ac610561371
+6525 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker da53cd9b-5e40-4f64-8acf-0b9105a9dbe0
+6526 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 275b5d8e-7478-4c81-b58f-77dc44aa8d2c
+6527 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e948e58e-cf96-4b2a-86d3-b6b8913ea3fc
+6528 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5349d478-cb3d-43e9-a290-dcffab6a14a1
+6528 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 88146019-09d2-4e27-9749-313b5a8ed9bb
+6529 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 16772123-35bf-4e32-a7f9-f5c40a8c8ff3
+6530 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cdb993fe-b116-4ecb-b038-6b7aed9df88b
+6531 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4dc6f45d-1c20-439b-b314-f41354d53952
+6532 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f99586c0-b4a4-4ff2-a873-1819fb7261cd
+6533 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e009df4b-d3b1-4229-966d-99562bc49a50
+6533 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 025278c1-b242-47ee-87bf-93ba2a8e61f8
+6534 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b802e155-7a06-41ba-b54c-5c3ca0b8ed4a
+6535 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 960f4d27-6ad4-4ce4-b416-1422d29407e9
+6536 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 70efcb94-eabe-4401-9687-0640b7f43e31
+6537 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cbb49e97-5f00-41fa-8664-9ec8c66738f6
+6538 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0da0d0ba-dc3a-40a5-b68e-8e5bba91523b
+6539 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5998f7ae-a791-4656-9316-25b5a783780b
+6540 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 35533e4d-b334-4327-8fc0-7e03dc099281
+6541 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker adb14a7f-7734-4541-9738-c339dbdb0f43
+6542 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1c33c9fb-64f5-4d3c-ad0e-95fe1a91328f
+6543 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7a4dea98-694f-49f3-99fb-8b2756afdca6
+6543 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d9d61844-39ca-40fc-8d07-5ac818c2a7f9
+6544 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 817f4aed-d5b1-414c-aeaf-bde1bb5f3c28
+6545 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 60f2272e-407e-4613-bb5c-7e2280ee0bd7
+6546 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c3b35d01-c76f-4379-824b-a23f6cdf9f73
+6546 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 224975dd-a161-44ac-87b3-2ab7407aef1c
+6547 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ac3ef220-96e3-4aa2-9a8a-d7b3f003fec8
+6548 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3ffcee93-6661-4520-9b1f-ff5f3b367c8c
+6549 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e9a1e052-62de-4190-a01f-09b657b54fe7
+6550 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6a022bfc-4bf5-400c-8255-0ee689dccb4f
+6550 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6849a839-324c-4196-8898-6039dfbb0596
+6552 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 06412b13-ae24-473a-a63e-228401c88c32
+6553 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cc317d60-ea9c-46ff-97c3-3089b72b1540
+6554 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9f052ec5-49dc-45ad-bfbf-b7dd71d9fad7
+6555 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0ad05b48-a9d2-41a5-917d-e493cc52d988
+6556 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ffca75a2-8dc7-4e67-a033-c27c80605c8f
+6556 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6ab008cb-2fda-4f6a-a6f0-94cf51e64709
+6557 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 70e97952-03bc-4c71-9bbe-60613a74c572
+6558 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0b472e31-e9e4-495a-8451-af75bd514e4c
+6559 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9f584f7e-78c1-446d-a09c-ebcba9765f24
+6560 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0c7eb270-7f4e-41c6-a9d1-c54a70b81cfb
+6560 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker fdd45658-a956-4f79-a784-c6afe016692b
+6561 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7a6bfc75-849e-4743-83b6-bc6c7a7c87e2
+6562 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d8386ce8-2614-4dcb-98eb-5fe5ae39d108
+6563 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b983f2a2-7aa2-4261-acc7-58f27ff60607
+6564 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1974dd99-8ca3-4dab-80e0-985c37fa9d5f
+6565 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3f995468-deea-4ef2-891a-6f1fcf208d47
+6565 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 75703200-833d-4a89-ba3f-329b8ba601d5
+6566 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a6bd0b5f-05fa-4ebd-ae19-22796a5c47c0
+6567 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 331cad1c-bc31-43d7-af31-52f77b605ff4
+6568 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a93cd7ec-d7e5-4837-9785-143313102903
+6569 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ddd89125-af51-427b-ad81-7b4d3de02f31
+6570 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0a72ebea-b064-4da9-961e-5d1ef310acaf
+6571 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c40a24c1-3e8e-4b2e-b38c-0ec9721396eb
+6572 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker db8ba678-9bfd-4ca8-9cf9-13f59463a753
+6572 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6763b60c-1788-4d42-aa03-9157a7320981
+6573 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker bd7cae10-b9a1-4698-8963-a466ffae06bb
+6574 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6eca416e-9adf-49b9-b243-bfa5cbc4ac08
+6575 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 056296da-ab39-405a-8985-4feeed8308d1
+6575 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d5058e9f-107d-47df-ab9a-479a6db9c5d7
+6576 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 217cfa92-b877-4fd3-86c6-d9ac60192495
+6577 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 370cccb5-ef6d-4169-b580-43d6fb4ee080
+6578 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e78e83d8-0c06-4b17-8ee4-adff0e6436e9
+6578 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 92665e99-e2cc-4036-91ee-872633f05d6b
+6579 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cef0774e-628f-4e11-906f-75d541e2d76b
+6580 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 88a16987-cb73-42da-bef5-92ba1d11cc3a
+6581 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1396c86b-f656-4cba-a40d-918a8f54f36a
+6582 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b9b88c40-1b39-474b-aa93-63318a7e7802
+6583 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a5c6c6dd-7692-49e5-8912-e8336c445c50
+6584 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0c2c5de4-57bd-4413-8762-5d31e1fcbdab
+6584 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0e044ef6-ff62-4872-b06b-686face7c613
+6585 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 173feee7-8299-48cb-b0bb-8a131b4613bb
+6586 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f895e013-7232-4f93-83e8-8e31f5bd55c2
+6587 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker fb18bbc3-665d-4af0-a941-7742280c1e65
+6587 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 84e1538c-099d-452c-b363-bd846b8bac4b
+6588 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2e735d4d-4add-4c3b-b656-6d811f43372f
+6589 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 18c4c8c0-926d-4549-968d-72f4dc5dc78b
+6589 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c0b2c722-884a-42d4-af7c-50ce67a93f12
+6590 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 482e63bf-be67-4019-a00d-0e09d689f6a6
+6591 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d7935eed-313c-45b7-8913-271cff4c0c8f
+6592 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 76095682-9bbf-4619-993d-eb925fcc0d1a
+6593 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b89cb954-3454-4be2-84ae-94be56735e65
+6593 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 11c3a373-2a11-41ca-8d05-6e0e981cc0ea
+6594 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7fbb8efc-fd8d-4bf4-b7d7-53b1d133cf7b
+6595 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 62293761-7fc5-4b21-ad62-d68c9d45f92e
+6596 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ac9fb8a1-35e6-48e2-bc21-20cdad7e5f6e
+6596 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7bc71b38-9833-41c9-8178-dac771c61b95
+6598 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 694d5ca4-f2dd-47ed-9678-c7a12778819b
+6598 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5bc94c46-d9b5-4e4e-bff7-38b086bcd01b
+6599 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0020718c-b1fd-463b-a8b3-e2aa6360897e
+6600 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a2d838b0-6231-43f4-ba4f-d0fb122d6035
+6601 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a2f9f285-b08f-4889-95ea-ac6cbccab5c4
+6602 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f07cc4dc-9d7d-44f9-a446-38821e2ae6f7
+6603 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f3408843-86db-4617-bfd6-a574b215e504
+6603 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dbd7880f-b619-43ed-a7ed-5ba90439bd43
+6604 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3cd69940-48f0-41ee-8ccf-f618bd3871b2
+6605 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f7503f6e-f8ab-4c90-ac00-8466ab31d7ee
+6605 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0256b49b-afa9-48ec-83a7-e46defbb448e
+6607 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0a0f25d1-cb82-40a5-902f-a58bc7cfebb4
+6608 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker fda60c71-18ed-496e-895c-f3fb523551e7
+6608 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4ebe6bf9-9eae-49f2-940b-bf3d67d343b2
+6609 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3c6b59ea-f47d-4736-b536-28fcc0c2d8c4
+6610 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 29c09f81-a9ac-4a05-9ca5-4d1f0ab8abcc
+6610 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d6b44a97-82e3-470b-8a0c-45dd9f6da8a4
+6611 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2dde942f-a790-4acb-88c7-9200dafa6981
+6612 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5f5d2f15-0cbe-4670-a15c-37847c9ae271
+6613 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 989c606c-3fc2-4902-bd0a-1aac22aa94c1
+6614 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 414bc371-7bf5-4c8e-9a57-4c5f1ee6b193
+6615 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 83af9513-238e-443b-9284-9a103c6e5048
+6616 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ad326f39-7fed-4c07-9e0e-ec83861b37ef
+6617 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 337dda1b-ab04-4fb3-960c-729e41de379d
+6618 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0a853b09-d7f4-44d8-8392-862ea96d976f
+6618 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2adc35f2-f134-41d5-9701-45d5b4a07e65
+6619 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 255d537a-da63-4c03-b2cf-bee2ba05fd5f
+6620 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c4329d3c-cd9a-4226-8e33-614fb47d443e
+6621 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e33355eb-2d92-466f-8872-2ab4f60d764c
+6622 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8c003d4d-c7ab-4246-86ee-512ad1e31240
+6623 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5c4362bd-24a5-4bab-a06d-104474da0c3b
+6624 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a0f760f1-4e50-4b50-9973-bf1ba066e9a2
+6624 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b6bb8000-f96e-4dc6-830c-3b772301004f
+6625 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cbc242eb-6b0c-4a57-a9b5-32a65845dbcd
+6626 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c65a1f1f-8375-463b-93df-3a30f0c1f1b8
+6627 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 58c73ef3-842b-44f3-ac89-fb785237fd07
+6627 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7253ab8e-dfb3-4869-bb5b-7566c15d8b67
+6628 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 561ba722-1f10-4d31-9556-f8e925649f92
+6629 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ef22f882-0aee-4451-9fb0-34d9f7976ff5
+6630 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a4d3dabd-3a7b-44b6-8ec8-018776e94d3f
+6630 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f42fd63b-4d75-42b7-b5e1-1ef879f5564f
+6632 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c3877b47-564c-476a-8191-9dd6d8d884b5
+6632 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2e2ef8ff-4ae9-4c91-9318-c334ad33c633
+6633 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker eba77056-fc13-4c43-b59a-fe70f68dd87e
+6634 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker adb32744-e808-4249-857e-af4f3d7a0a83
+6635 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 15a6c639-d543-4dbd-b54d-1595c9bc9db0
+6636 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6f60adf8-fc51-4e2d-bd60-2047f4f6493c
+6636 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 79a0e2d4-be16-414e-ba8c-f8fefa12882b
+6637 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker eac48707-9651-449b-a4d7-ffd5c0c73aef
+6638 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 660895f9-f995-4241-94ed-c16ce2a69edd
+6639 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c9fa1b6a-9328-4c3c-a554-59c2075c8014
+6640 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c1a36651-1ad2-4b05-8324-899241982861
+6640 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f0581677-bd04-4456-9ce3-fc8bbeff9252
+6641 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9b2650e7-efe2-4e00-b818-1d461b1b169d
+6642 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker edfa5c71-ca0f-48e8-852c-55eea3b49f84
+6643 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cd8e8286-28c8-46e2-88d4-7af9fcce9037
+6643 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c6f16d39-d4ef-4456-bf14-1f0d9ea56641
+6644 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f6e09b1f-8d1c-415a-96bb-a08c1d69e9d7
+6645 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 61c43b71-f4f4-435d-809e-8fabefb59950
+6646 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cc471827-68f6-434a-9689-205af8ab7f30
+6647 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d3de9eab-7b86-4a59-aab4-b67f26f3e783
+6648 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f8dea480-92be-4f66-ab66-aa6edb10a643
+6648 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker da18b0da-5bdb-44db-9d0f-fedf09777aa7
+6649 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 305f186b-7fe7-464e-8753-f06e8f7a82dd
+6650 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d357a9e7-2bc3-49da-89f2-cc0a4a686b6d
+6651 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dfee32cb-00ce-4cd8-92a0-d2fb3f7f0207
+6652 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ced344f7-34b7-43e4-a635-4b12969b30d7
+6653 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ae5a6cac-78bc-4ed7-8055-746ac4f50ccd
+6653 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 675c5d24-f5b0-4ba3-87db-59053e56abfd
+6654 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8cc7faf2-c00a-4bb6-98a6-13c971f88884
+6655 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5caf7add-319a-42f4-900d-be8b61113f09
+6656 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 442105f3-9593-435b-9447-33c488a82e0b
+6657 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 92e54f2c-f2b9-4db9-a894-eb6ce7bbc854
+6658 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 728f09ae-ac83-4029-b590-a0eb151b8a83
+6658 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7863085f-c53d-470a-8b85-bb49f4037c8f
+6659 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 242018e4-23cf-4606-b3e8-4412cd995ab7
+6660 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3bdde3a4-ea88-437d-8f31-b5ca2a62e880
+6661 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5149f32d-0d88-4113-9544-7e1aa7cfb741
+6661 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9c9c3f88-ed3e-4483-b245-b20d590666be
+6662 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c0c0c4fc-38e8-4468-9193-d0229a6a1d48
+6663 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker fcc3ee9b-85b2-4473-b077-282c5550ba1b
+6664 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5aceb348-e856-403a-86b7-bdd6a1f20663
+6665 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 189b8324-d96b-4d7c-8c01-f4d285cb7b1b
+6666 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 85c0b709-9cd4-49ec-bd6b-96753ad15a50
+6667 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 31a2680d-5d25-4de0-aaa6-3988623eb466
+6668 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0e20a1b5-5486-4e09-986e-94e29f09edff
+6668 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 19a55e88-e6dc-4ce1-b7ec-91bab64d989f
+6669 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7cd32ad9-4ef0-4534-9d51-c86a0061c48b
+6669 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0f0e3c30-39f8-48a2-a78d-b79dfe509376
+6671 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8e936c63-98cf-48bf-9187-8b47cf0ff0cf
+6672 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b34f331a-6947-4453-a14e-f1930944b924
+6673 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cd62d5fb-6072-498c-aba3-7555952e60aa
+6673 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dadd263c-0200-4dc5-9ae2-c193a40fb0e9
+6674 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ce7b1664-1a8e-49d1-9f91-1163c7c29f00
+6675 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c87b6228-6a63-4248-8cce-f69737b8ffe4
+6676 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9706f416-72bc-418a-b4f3-5d04b593dc8e
+6677 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 48165290-b0d4-4df3-82f9-9a5effe15e2a
+6678 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8617b6ca-0079-45e5-8e48-84885e5dbdb7
+6679 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1d3964d4-772f-48b4-9978-2646212bd046
+6679 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d4a17d49-5b9b-4b5a-a235-42fece72a57e
+6680 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8e46097c-6f7e-42b9-93b6-1f0d078171b8
+6681 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ab5cd451-e5dc-4b85-a226-6739bd4c9f6e
+6682 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a7559d64-9374-47d4-b740-5a2dcbf8bea6
+6682 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 37ec0ad7-05be-4cda-b385-009bc5736c76
+6683 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d7c52544-9049-4779-9059-9d3b54855e99
+6684 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 03270ed6-a61a-43e8-a324-138ef350a311
+6684 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 42e321cc-482c-4756-9a4f-58e37dd10c72
+6686 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 20eafd26-7b11-4945-b0f4-42bc9cb4bd02
+6686 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 18f21301-17f1-4894-988c-c9c1d3bdc6a9
+6687 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dbcda075-ba02-480f-84c8-c31b382f5d74
+6688 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b581ddfa-253a-45b2-97bd-0702915e9a6d
+6689 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 94c51eba-76be-45a0-9cee-70f032a25bf6
+6689 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8d366aab-d1fe-4aa1-968b-2658ac707b48
+6690 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3a89ce92-11f0-4c70-baf5-0489d5f1cde5
+6691 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e2c1ab00-0636-4c4e-ad6d-90b4d53c1a59
+6691 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9c0c10f4-93b5-4653-80d3-06fd63011a08
+6692 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b3adcb0e-6953-4b5e-bb9a-08219a2fd6fd
+6693 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 82b924f0-bb9d-4dec-8beb-ceee8a07c369
+6694 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d73b8616-fae1-45da-81dc-28dbea43b08c
+6695 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9f450588-8dea-4437-bea7-cac88937a8ad
+6696 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e72b57e0-3242-49e7-9e3d-9f336fe3b0bd
+6696 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 04b1a3fe-c14a-49ba-818c-474ed4bc1673
+6697 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e733d69e-403e-44f6-86a9-be9acdb2f447
+6698 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 93c7efe1-96a8-4d59-bdd5-d3d8f41234fb
+6698 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e246be06-5584-4148-a44f-10d517589693
+6699 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6b33a1aa-a1a3-49dc-8b95-def835a9c1b6
+6700 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ae509748-e103-48de-8659-bde05e25ec95
+6701 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b48e5590-83de-4698-8d18-c88a125b9776
+6701 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5a6a3ca5-074f-4918-9f2e-9543b1c01f25
+6702 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 158d940b-13af-497e-8552-a76afdc6f7c3
+6703 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d0584820-0468-42f1-aacd-f2abe2f1ddfa
+6703 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker aacce329-2bbb-485c-b156-dcd372669095
+6705 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1cc93a39-0136-4df3-b178-0fc661d88938
+6705 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c0d329d3-0d66-49d2-a9c8-30a24997d219
+6706 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1cc12870-52e8-42d9-8223-cab3964ba68e
+6707 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c7575742-8a9a-4986-960b-b78fd98e464e
+6708 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d0f28c65-2cee-48e1-ab4c-7b92218a1482
+6708 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6bf70a90-291f-43c3-97c9-26333b0c7c69
+6709 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker eab5fe8c-1270-456b-b0f6-e5415b96ce3a
+6710 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6c4d2c89-21f2-433b-89f6-6d8ec70400bd
+6711 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker af62dc8b-d07c-407a-a79d-5a625bfc7172
+6711 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6c0e6775-4fd3-4680-bd63-97d7a1435bba
+6712 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6cd68440-a6dc-436c-8fd3-a068614994c7
+6713 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 146c819a-5081-477e-972e-251b5def8849
+6714 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e9d84570-595c-4a53-ad96-948448948563
+6715 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker acc8aa80-0d4f-4d31-9baa-0e0c105a93c3
+6715 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7a7a2c9e-96ab-4b52-bd70-dce00158444f
+6716 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 51d72368-29ee-4725-b211-f5e87ea8f790
+6717 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 95a680e8-aa62-446e-9696-6c98e8154bc7
+6718 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d030d57c-817c-4e2d-b279-901f7807e53f
+6718 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 291422fd-2b40-41c2-9712-63321bfbe246
+6719 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3ac361ea-b92d-4bae-ac25-4ee097f48c21
+6720 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6d47bdc0-e4df-4fda-bc20-766a4932f7f1
+6721 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 80785810-c0a6-4f01-ae5a-03e7b2a8290b
+6722 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker bad2d5f5-7632-4880-a768-29ab83383130
+6723 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8d793c65-2122-4508-bc4a-484d91d28914
+6723 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c08002e6-3e45-46c5-9f96-f213cb5b179f
+6724 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b0b93c91-4acb-4a21-bd17-dfc329dded84
+6725 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker bf401364-cd8c-49bf-afa0-2ead1274853c
+6726 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2614d93e-9519-47aa-828a-8fbf94ef5c4e
+6726 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a5f594be-a8cc-4f03-b164-61699eabbad7
+6727 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 797bdc53-4117-481c-b4f8-e8377757be70
+6728 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 264b33d5-67e6-4e66-a684-a96c586df73a
+6729 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a179b90c-0bfb-467e-add4-fcf319e5eb7a
+6729 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 72e92e6d-f6f0-443a-839d-472637592c8e
+6730 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker bba4eae2-d3af-491c-aa5d-d70e8a699a19
+6731 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 259c3264-88cf-41fb-9f87-1e4dc89c3746
+6732 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3723f4d3-403e-474e-8963-fddf232f8332
+6733 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9c864d6d-d0b5-4209-bbdb-a889bfd40bb7
+6734 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1a019630-d58f-4712-85c5-b2f545f967cc
+6734 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 65e6569b-49f9-4d38-9131-5c29b4ebedde
+6735 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5b4185ff-3bb6-4e23-aad1-5908add63d59
+6736 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 83fe37d3-38c6-4e0c-a00c-64520bbad603
+6736 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 67a96b37-6380-4c58-8e40-f2e17445a8cb
+6737 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 935fc8c9-4a0f-486f-af5c-5d691dfe38bd
+6738 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7d0a5f83-47f2-43d3-9fa8-6492e6395263
+6739 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 43b692d4-e43e-45fa-a483-087f2ddaffa2
+6739 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 538f33fe-75c2-4648-9336-6023ed075ea5
+6740 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker aa1076f6-b399-4a4e-a8a0-42b00090d510
+6741 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6536339c-b71c-4dfb-9f1d-a3acc35b6878
+6742 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3feb99c1-578e-4726-b354-e585dbbcf545
+6743 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 506191c7-81e7-4102-92c7-1e5963f1a2b4
+6743 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 446cc509-a2d8-44eb-9fab-e14c6faa02a6
+6744 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 14b16df5-1efd-491e-83c4-8d1e5e67f9b7
+6745 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker efff9544-68e7-4898-b802-318baf663dea
+6745 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 657fa20e-214c-49af-8276-59eb8d841ea6
+6746 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f3ecf088-bc89-4af2-9630-7e2ba6ec7f2b
+6747 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f839de8e-2c9c-4ec5-a088-c133adab8da4
+6748 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 65c111dd-3f5f-49a8-899a-b331f8f58033
+6748 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d23a06d0-4bdd-470c-964b-a46c6b0e86ac
+6749 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dda35b85-b027-4402-9855-d0033532a1fa
+6750 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8072f1aa-1c22-4d29-b3cc-915cbbb2c92d
+6750 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 69869edb-6167-448e-ae70-f4f258e9460b
+6752 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1cd1b3b6-4550-4fc3-b7d6-c23229893a72
+6752 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2b7a773e-8eac-4f35-9f39-5e3ea35fd014
+6753 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4f0cdcc5-a927-41d1-9382-d194b0d39544
+6754 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker aa2a9568-9d7b-4303-bc71-aa72d7f63e8b
+6755 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 83b0c455-0bdf-4378-a7f9-00f77c62812e
+6756 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 83b8c347-4cf5-422e-951f-da75b390adb1
+6756 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 65cb38c9-b2f5-4c76-a5a4-e4b90607ea73
+6757 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker aee12f62-af00-4b57-957d-82b84e2a4cf4
+6758 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 001f75cf-59c3-4888-b8d6-4c5ef31a201e
+6759 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3202e46a-b0d2-49fd-925d-616f15512cf8
+6759 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 29c2f829-34cd-44dc-95fa-c202d3071c27
+6760 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6390c242-2144-4ba3-95ed-8d7f31353542
+6761 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5d1a2975-9df8-4a92-98a3-8a03350663c0
+6761 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e069c330-a2e6-4a98-b4d6-f4975c524ae4
+6762 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 337e4ca3-cd9d-41f8-ac94-42dc3d24b3d5
+6763 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 85549b45-441d-4843-9fd8-a530a84b00e1
+6763 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 41f64dc5-a867-464e-9571-df4ed4155ca0
+6765 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0352a735-4946-4aa1-8508-5ae560a04d40
+6765 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cd3993ca-333c-47b9-924c-78666e624d34
+6766 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e49328ce-3c25-46a8-9953-f0045d96e9d0
+6766 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b6308569-9039-4868-9b38-1a0d88468991
+6768 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 07e1bb8b-d26d-4336-bf1a-9fe6dedf4617
+6768 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5bbecf98-4e7b-45c3-96ab-41c54fb73e6b
+6769 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7582cab3-f006-4442-9be4-ddbcaabbab8a
+6770 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d3b947b0-a3c7-4abb-8515-1ce70e9170be
+6770 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c18fcc8a-107d-4aaa-8b79-c367a8b12e0a
+6771 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 58355ca8-5573-4e77-820f-6bf40726a4ab
+6772 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7e9ed09a-676b-4087-9965-8fe307f0065d
+6773 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b95cdd6a-5710-4bed-ac7d-873af2874ec0
+6774 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d8951b4c-0771-443a-9c55-63bfefd1775c
+6775 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9eda466b-a359-42f0-9858-1ec0dc9d7d32
+6775 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 46f89fc9-cea7-418f-b439-759548fd66ed
+6776 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d18f1908-467f-451b-93f7-3f4e2af1d9dd
+6777 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9a586d46-9f86-48a3-8220-3e2d9dc95ff5
+6778 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 11b34a81-90c6-46f2-b9c6-919e2b53370a
+6778 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2ddc053f-a92b-493c-ba14-1a5e8a747765
+6780 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker db52e576-7234-4f00-a908-3ec2126a9201
+6781 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0351831d-454c-468e-8e88-bb9a2424e675
+6781 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c1e3919b-8915-4ec8-8784-9a153bb1628f
+6782 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 11955027-b80d-4310-8159-59e38e607283
+6783 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 63465854-1714-483e-81ae-1866835cc515
+6784 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e957bdc8-e2f6-4648-8812-cb50639b1e9a
+6784 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6685cd57-5894-4e78-a125-c331e0ad9f01
+6785 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c525d511-396f-44ad-9e6a-ea2fd227d83a
+6786 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1b778506-6991-4868-97de-8c6504c60fd1
+6787 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0588a084-c81f-4566-81ab-1390ea608b90
+6787 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 3909e26f-5b58-4600-aa3e-16e52b95cea6
+6788 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 851189d9-2060-4b61-ba14-b83679624529
+6789 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1cc40d98-9cb6-42fd-bf92-f3f358bbb526
+6790 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 36fc10bd-5218-457a-a88f-3a2a2fc163e0
+6791 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7d22f433-95dd-4e90-a6d5-dcb3f9ac7fce
+6792 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e2494c93-5678-4c4f-bd43-7faea0aa57a2
+6792 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 037e36c5-1f2c-4f09-8b01-bcf95289dbae
+6793 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 502a4ecb-6724-492a-8e71-d602a3bc60db
+6794 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 61fa77ff-9fb3-4b2d-bf52-d5b8512edbfa
+6794 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ebd46da9-855e-48f9-b0e9-8e87f8a84258
+6795 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a7e8e91f-42b9-4cdb-9423-b6f71aa1dd25
+6796 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 69d54d95-2638-40fd-938f-e8dd806809dd
+6797 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9fa05e7a-f60f-4515-b643-d78008d549c8
+6797 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b7b947b9-aba5-4145-a320-da2fa087b5b0
+6798 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9019ff14-8135-4e5f-a5b7-ac67783d9cc1
+6799 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cd4cec77-b886-4f57-be34-946cceb6280d
+6800 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a0454ba0-ef7d-455e-98c8-23bf10c75692
+6801 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 54e0c345-8e6c-4e1f-8af6-991afd39fb61
+6802 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 88adeed6-41c9-44b8-9cac-c8d9f94d0a58
+6802 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker db2ce6ad-e1bc-408f-858a-d3d0403fa875
+6803 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c363326f-5ead-4193-b0d3-83018e9eecff
+6804 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 97c1ce5e-005a-46b7-9d0f-27117693f1bd
+6804 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6bf82660-4479-42d5-a38d-b10a54200ed3
+6804 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 001cf3c5-0642-4a75-b98c-71d6a5c94a2f
+6806 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 94413ce6-420a-468a-acc0-1905704b1ec9
+6807 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 280fb5fc-bb49-475b-a02c-ccf33862e205
+6808 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 43a23838-fdbf-4e5f-b6bb-d00ca10fb2da
+6808 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a64881ff-6b59-484d-820d-03a331a64b3b
+6809 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 79042dcc-c754-47bb-84c8-c8d713c543d1
+6810 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ca6dd253-4fbc-41f3-85eb-14a1ca2b2ea1
+6811 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4225e564-ed35-47c6-b232-ac4bd14df509
+6811 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6b0f1423-a874-42b4-8c72-8fd5e64c5ae0
+6812 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker be91d0b0-2320-4c48-a089-bd40c6250efb
+6812 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 38bf596c-a165-498f-bdb8-c3ab673c6839
+6813 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 14509231-ae91-4112-8265-cb0d0d2325f8
+6814 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 1c8a7f29-bb07-40a5-87bc-45a8d9252f3b
+6815 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 658b890c-ab31-486a-ba8f-74c0052fa009
+6816 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cb23945b-1edd-4811-b438-42ad7fd7866a
+6817 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 81babbd3-e3cb-47ec-96f9-28cfb81810dc
+6818 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dae87d50-fbb8-4bbf-9b7f-0c49b3ace7a0
+6818 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4a26bfb1-7648-430e-ae5c-6531835d33f5
+6819 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 06c76649-3e16-45ec-b7f5-447b9d21029c
+6820 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker b797d5ea-e2a4-4b81-9552-88df797cebb5
+6821 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker fbddbbaf-eb77-4ad2-a683-cbb3d42dabed
+6821 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker ef40272f-64fb-46a9-bd4a-4323519109d4
+6822 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 8588ff4c-2783-452c-9603-7195b0078371
+6823 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c7cd2663-5a19-4472-82e9-8dcdd4784506
+6824 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 13e62d3d-7dfc-4e19-949a-28ccd0c30782
+6824 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e9cab2a0-8aed-452f-83d9-ae119f434764
+6825 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 519837dd-af33-4f85-855f-5c4fd2a63ba5
+6826 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker bdaa0861-1067-47aa-81bf-00db4e3de5db
+6827 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 693f285d-09e8-4e0d-a35d-de1e931b20de
+6828 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker daf3cd05-221a-48a6-9b44-131dfdf17bd9
+6828 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6580a508-f156-45cb-beab-ebee5acddee3
+6829 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a05244a4-ad51-4ac2-b0b0-29e12072f923
+6830 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 53288c0a-0416-4201-8462-5d9a5fff0be7
+6830 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 190b8512-aae8-42cb-885b-340da9d05cdc
+6831 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4051388a-7a3e-4965-8ca3-0b246cd877cd
+6832 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker fedf3693-96e0-49bc-ae01-8a183bec5eb3
+6833 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker be5b6e97-cc0e-4812-9128-1e4daef9d303
+6834 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f257ed4e-ca00-49ca-bf50-84a3681a7415
+6834 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker e2a42ec3-388c-44e8-834a-935ea6ae4ab9
+6835 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 35c9a492-6aea-4c80-a4ac-46d0f3b01cc9
+6836 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6a1475c4-e1c9-411b-b650-a9fec4d812f6
+6837 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker bef993ef-efbe-414e-a4ea-7e1bf2ad1722
+6837 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker a08feda8-addb-4f0d-b0f5-cf9d2ee93fc1
+6838 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker f5a1a49b-a310-4833-82b5-f2ce7124374b
+6839 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2ed8fa9e-acd1-452f-a7dd-3de9f29d57a7
+6839 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c800a6a6-2950-4b9f-be95-f62b31010d76
+6840 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d4867f4c-a489-45d9-9d73-0b79d966592d
+6841 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 7bfbbf41-ab36-49b6-a8ef-0dc45d1328af
+6842 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker da705891-b132-4c7f-b15e-4a28b847171d
+6843 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 371a4aba-8283-4351-956a-0d0f3d01eacc
+6843 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker cf494032-2114-4a73-8767-6ffc8e50d13a
+6844 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 30b244c6-d04a-4742-ab1d-c5b2916b5ea5
+6845 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 2eba3193-a303-4bfd-ab97-98ba295410c1
+6846 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 13ef41b4-307d-444b-84a1-f1dbcd069961
+6846 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 28f18cc5-d971-4c79-923e-a0a6140b87d0
+6847 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 9946c6d4-d24d-4e9f-9a32-f5f1533695e5
+6848 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d8e32bdd-6bd5-4d7f-8854-f23ce848f2f7
+6848 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 40428ad2-7485-4af5-a8c6-b26cecdc792a
+6849 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 73112169-3137-4f16-8a86-99e730301792
+6850 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 4f4b3034-a9b2-4213-924f-d033c603918f
+6851 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d9f3a2b8-8505-4aef-8fff-d5d77f32c185
+6852 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 81ed3e55-e4e2-4354-8a6b-a5c2f5532fc5
+6853 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 5547bbb3-dbed-41a5-ac41-43d4e44b92db
+6853 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 71b52f6d-a310-451b-898b-3c30d09080ea
+6854 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker d2f90f6b-1d20-4384-a918-e6a3ad149dd6
+6855 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker dae0cd87-ec0e-4fde-9c46-84d093f613d9
+6855 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 6999b7a0-66b7-46d3-afc1-c70252ffd639
+6856 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker c7118cc4-04c5-4003-ad04-edd859beaec1
+6857 INFO  cassdemo.backend.BackendSession: Success: don't found duplicates in locker 0e1ad5e4-1438-442a-8042-89dda6ff9140

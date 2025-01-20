@@ -67,6 +67,9 @@ public class BackendSession {
 	private static PreparedStatement INSERT_INTO_SHIPMENTS;
 	private static PreparedStatement INSERT_SHIPMENT_INTO_LOCKER;
 
+	private static PreparedStatement INSERT_SHIPMENT_LOCKER;
+	private static PreparedStatement INSERT_LOCKER_SHIPMENT;
+
 	private static PreparedStatement DELETE_ALL_FROM_LOCKERS;
 	private static PreparedStatement DELETE_ALL_FROM_SHIPMENTS;
 	private static PreparedStatement DELETE_ALL_FROM_LOCKER_SHIPMENTS;
@@ -100,6 +103,14 @@ public class BackendSession {
 							"INSERT INTO locker_shipments (locker_id, shipment_id, locker_box_index, addedAt, status) VALUES (?, ?, ?, ?, ?);" +
 							"INSERT INTO shipment_lockers (shipment_id, locker_id, locker_box_index, addedAt, status) VALUES (?, ?, ?, ?, ?);" +
 							"APPLY BATCH;"
+			);
+
+			INSERT_LOCKER_SHIPMENT = session.prepare(
+							"INSERT INTO locker_shipments (locker_id, shipment_id, locker_box_index, addedAt, status) VALUES (?, ?, ?, ?, ?) IF NOT EXISTS;"
+			);
+
+			INSERT_SHIPMENT_LOCKER = session.prepare(
+							"INSERT INTO shipment_lockers (shipment_id, locker_id, locker_box_index, addedAt, status) VALUES (?, ?, ?, ?, ?) IF NOT EXISTS;"
 			);
 
 			DELETE_ALL_FROM_LOCKERS = session.prepare("TRUNCATE lockers;");
@@ -290,19 +301,35 @@ public class BackendSession {
 		BoundStatement bs;
 		boolean confirmed=false;
 		for (Integer index : availableIndices) {
-			 bs= new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-			 bs.bind(locker_id, shipment_id, index, timestamp, "WAITING",shipment_id,locker_id,index, timestamp, "WAITING");
+			 bs= new BoundStatement(INSERT_SHIPMENT_LOCKER);
+			 bs.bind(locker_id, shipment_id, index, timestamp, "WAITING");
 			 try {
 				session.execute(bs);
 			 } catch (Exception e) {
 				throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
 			 }
 
-			 confirmed=validateInsert(locker_id,shipment_id,index);
+			bs= new BoundStatement(INSERT_LOCKER_SHIPMENT);
+			bs.bind(locker_id, shipment_id, index, timestamp, "WAITING");
+			try {
+				session.execute(bs);
+			} catch (Exception e) {
+				throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+			}
+
+			confirmed=validateInsert(locker_id,shipment_id,index);
 
 			 if(confirmed) {
-				 bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-				 bs.bind(locker_id, shipment_id, index, timestamp, "CONFIRMED", shipment_id, locker_id, index, timestamp, "CONFIRMED");
+				 bs= new BoundStatement(INSERT_SHIPMENT_LOCKER);
+				 bs.bind(locker_id, shipment_id, index, timestamp, "CONFIRMED");
+				 try {
+					 session.execute(bs);
+				 } catch (Exception e) {
+					 throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+				 }
+
+				 bs= new BoundStatement(INSERT_LOCKER_SHIPMENT);
+				 bs.bind(locker_id, shipment_id, index, timestamp, "CONFIRMED");
 				 try {
 					 session.execute(bs);
 				 } catch (Exception e) {
@@ -311,8 +338,16 @@ public class BackendSession {
 				 break;
 			 }
 			 else{
-				 bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-				 bs.bind(locker_id, shipment_id, index, timestamp, "REJECTED", shipment_id, locker_id, index, timestamp, "REJECTED");
+				 bs= new BoundStatement(INSERT_SHIPMENT_LOCKER);
+				 bs.bind(locker_id, shipment_id, index, timestamp, "REJECTED");
+				 try {
+					 session.execute(bs);
+				 } catch (Exception e) {
+					 throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+				 }
+
+				 bs= new BoundStatement(INSERT_LOCKER_SHIPMENT);
+				 bs.bind(locker_id, shipment_id, index, timestamp, "REJECTED");
 				 try {
 					 session.execute(bs);
 				 } catch (Exception e) {

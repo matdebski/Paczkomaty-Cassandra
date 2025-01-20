@@ -126,6 +126,7 @@ public class Testing {
 
     public void stressTest() throws BackendException {
         System.out.print("START");
+        duplicatesFound.set(0);
 
         this.session.deleteAll();
         this.generateRandomShipmentsAndRandomLockers();
