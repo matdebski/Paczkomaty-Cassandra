@@ -287,72 +287,72 @@ public class BackendSession {
 				.collect(Collectors.toSet());
 
 		availableIndices.removeIf(occupiedIndices::contains);
-		BoundStatement bs;
-		boolean confirmed=false;
-		for (Integer index : availableIndices) {
-			 bs= new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-			 bs.bind(locker_id, shipment_id, index, timestamp, "WAITING",shipment_id,locker_id,index, timestamp, "WAITING");
-			 try {
+
+		if (!availableIndices.isEmpty()) {
+			Integer firstAvailableIndex = availableIndices.get(0);
+
+			BoundStatement bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+			bs.bind(locker_id, shipment_id, firstAvailableIndex, timestamp, "WAITING", shipment_id, locker_id, firstAvailableIndex, timestamp, "WAITING");
+			try {
 				session.execute(bs);
-			 } catch (Exception e) {
+			} catch (Exception e) {
 				throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
-			 }
-
-			 confirmed=validateInsert(locker_id,shipment_id,index);
-
-			 if(confirmed) {
-				 bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-				 bs.bind(locker_id, shipment_id, index, timestamp, "CONFIRMED", shipment_id, locker_id, index, timestamp, "CONFIRMED");
-				 try {
-					 session.execute(bs);
-				 } catch (Exception e) {
-					 throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
-				 }
-				 break;
-			 }
-			 else{
-				 bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
-				 bs.bind(locker_id, shipment_id, index, timestamp, "REJECTED", shipment_id, locker_id, index, timestamp, "REJECTED");
-				 try {
-					 session.execute(bs);
-				 } catch (Exception e) {
-					 throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
-				 }
-			 }
+			}
 		}
-		System.out.println("insertResult: "+confirmed);
-		//toDO if confirmed==false - there is no lockerbox available,insertion unsuccesfull
 
+		tryToConfirmShipmentsInLocker(locker_id);
 	}
 
-	boolean validateInsert(UUID locker_id, UUID  shipment_id,int index) throws BackendException{
-		List<LockerShipment> lockerShipments= selectAllShipmentsFromLockerById(locker_id);
+	void tryToConfirmShipmentsInLocker(UUID locker_id) throws BackendException {
+		Locker locker=selectLocker(locker_id);
+		List<Byte> lockerBoxes = locker.getLocker_boxes();
 
-		Instant timestamp=selectShipmentLocker(shipment_id,locker_id).getAddedAt();
+		List<Integer> availableIndices = new ArrayList<>();
+		for (int i = 0; i < lockerBoxes.size(); i++) {
+			availableIndices.add(i);
+		}
 
-		// Choose shipments assigned to same locker box index
-		List<LockerShipment> filteredShipments = lockerShipments.stream()
-				.filter(shipment -> shipment.getLocker_box_index() == index)
+		lockerBoxes.sort(Collections.reverseOrder());
+
+		List<LockerShipment> lockerShipments = selectAllShipmentsFromLockerById(locker_id);
+		Set<Integer> occupiedIndices = lockerShipments.stream()
+				.filter(lockershipment -> lockershipment.getStatus().equals("CONFIRMED"))
+				.map(LockerShipment::getLocker_box_index)
+				.collect(Collectors.toSet());
+
+		availableIndices.removeIf(occupiedIndices::contains);
+
+		List<LockerShipment> unconfirmedLockerShipments = lockerShipments
+				.stream()
+				.filter(lockerShipment -> !lockerShipment.getStatus().equals("CONFIRMED"))
 				.collect(Collectors.toList());
 
-		// Check if any shipment has status Confirmed
-		boolean isOccupied = filteredShipments.stream()
-				.anyMatch(shipment -> shipment.getStatus().equals("CONFIRMED"));
+		for (int i = 0; i < availableIndices.size(); i++) {
+			if (unconfirmedLockerShipments.size() == 0) {
+				break;
+			}
 
-		if (isOccupied) {
-			return false;
+			LockerShipment unconfirmedLockerShipment = unconfirmedLockerShipments.get(0);
+			unconfirmedLockerShipments.remove(0);
+
+			BoundStatement bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+			bs.bind(locker_id, unconfirmedLockerShipment.getShipment_id(), unconfirmedLockerShipment.getLocker_box_index(), unconfirmedLockerShipment.getAddedAt(), "CONFIRMED", unconfirmedLockerShipment.getShipment_id(), unconfirmedLockerShipment.getLocker_id(), unconfirmedLockerShipment.getLocker_box_index(), unconfirmedLockerShipment.getAddedAt(), "CONFIRMED");
+			try {
+				session.execute(bs);
+			} catch (Exception e) {
+				throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+			}
 		}
 
-		// Check if any shipment has an earlier timestamp
-		boolean isNotFirst = filteredShipments.stream()
-				.anyMatch(shipment -> shipment.getAddedAt().isBefore(timestamp));
-
-
-		if (isNotFirst) {
-			return false;
+		for (LockerShipment unconfirmedLockerShipment : unconfirmedLockerShipments) {
+			BoundStatement bs = new BoundStatement(INSERT_SHIPMENT_INTO_LOCKER);
+			bs.bind(locker_id, unconfirmedLockerShipment.getShipment_id(), unconfirmedLockerShipment.getLocker_box_index(), unconfirmedLockerShipment.getAddedAt(), "REJECTED", unconfirmedLockerShipment.getShipment_id(), unconfirmedLockerShipment.getLocker_id(), unconfirmedLockerShipment.getLocker_box_index(), unconfirmedLockerShipment.getAddedAt(), "REJECTED");
+			try {
+				session.execute(bs);
+			} catch (Exception e) {
+				throw new BackendException("Could not perform insert operation. " + e.getMessage() + ".", e);
+			}
 		}
-
-		return true;
 	}
 
 	public void insertShipmentIntoLocker(UUID locker_id, UUID  shipment_id) throws BackendException{

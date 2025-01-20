@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14676c8e-1068-401d-8fc2-e40422d33ab4" name="Changes" comment="Create insertShipmentIntoLocker get available lockerbox indexex">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cassdemo/testing/Stress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cassdemo/testing/Testing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CassandraDemo.iws" beforeDir="false" afterPath="$PROJECT_DIR$/CassandraDemo.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out.log" beforeDir="false" afterPath="$PROJECT_DIR$/out.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/backend/BackendSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/backend/BackendSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/tables/LockerShipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/LockerShipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/tables/ShipmentLocker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/tables/ShipmentLocker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cassdemo/testing/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cassdemo/testing/Testing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +232,8 @@
       <workItem from="1737235576359" duration="6228000" />
       <workItem from="1737243918816" duration="3547000" />
       <workItem from="1737280151701" duration="13444000" />
-      <workItem from="1737313924693" duration="9974000" />
+      <workItem from="1737313924693" duration="11549000" />
+      <workItem from="1737344595866" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="Correct crud operations, add menu interface">
       <created>1737241470012</created>

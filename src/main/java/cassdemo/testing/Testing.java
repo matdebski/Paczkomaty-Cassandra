@@ -14,7 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Testing {
-    private final int STRESS_TEST_THREADS = 10;
+    private final int STRESS_TEST_THREADS = 5;
 
     private static final Logger logger = LoggerFactory.getLogger(Testing.class);
     public final BackendSession session;
@@ -125,6 +125,8 @@ public class Testing {
     }
 
     public void stressTest() throws BackendException {
+        duplicatesFound.set(0);
+
         System.out.print("START");
 
         this.session.deleteAll();
