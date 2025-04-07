@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS shipment_lockers (
     status text,
     PRIMARY KEY (shipment_id, locker_id)
 );
-
+```
 ## 🚚 Parcel Assignment Process
 To reduce the risk of consistency anomalies in Cassandra, the parcel assignment process follows a two-phase approach:
 
@@ -56,10 +56,16 @@ A temporary entry is created in locker_shipments and shipment_lockers with statu
 
 The system performs the following checks:
 
-Is there an existing confirmed assignment for that box?
+Is there existing confirmed assignment for that box?
 
-Is there a waiting entry with an earlier timestamp?
+Is there a waiting assignment with earlier timestamp?
 
 If neither condition is met, the status is updated to **CONFIRMED**, successfully assigning the parcel.
 
 Otherwise, the status is set to **REJECTED**, and the process continues with the next available compartment.
+
+## Example test results:
+![image](https://github.com/user-attachments/assets/30315a8d-6b19-4da9-afcf-64b9eb5e3f93)
+![image](https://github.com/user-attachments/assets/eddb73f3-92df-45c4-a786-80598fcba01f)
+As you see, there are 2 records with the status "CONFIRMED"  assigned to the same compartment (locker_box_index)
+
