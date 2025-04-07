@@ -67,5 +67,5 @@ Otherwise, the status is set to **REJECTED**, and the process continues with the
 ## Example test results:
 ![image](https://github.com/user-attachments/assets/30315a8d-6b19-4da9-afcf-64b9eb5e3f93)
 ![image](https://github.com/user-attachments/assets/eddb73f3-92df-45c4-a786-80598fcba01f)
-As you see, there are 2 records with the status "CONFIRMED"  assigned to the same compartment (locker_box_index)
+As you can see, there are two records with the status "CONFIRMED" assigned to the same compartment (locker_box_index). Such anomalies can only be observed in a multi-node environment.
 
